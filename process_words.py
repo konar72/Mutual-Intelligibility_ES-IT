@@ -1,7 +1,8 @@
 import spacy
 import pandas as pd
+import numpy as np
 
-nlp = spacy.load('it_core_news_md')
+nlp = spacy.load('it_core_news_lg')
 
 df = pd.read_csv('parole_italiane.csv')
 df.drop(columns='frequenza',inplace=True)
@@ -12,10 +13,11 @@ df.drop(columns='frequenza',inplace=True)
 print('Removing repeated lemmas (total words: ' + str(len(df)) + ')...')
 df['lemma'] = df['lemma'].apply(lambda x: x.split(' ',1)[0])
 df = df.sort_values(by='rango').drop_duplicates(subset='lemma', keep='first')
+df = df[df['lemma'].str.strip().astype(bool)]
 print('Reduced list to: ' + str(len(df)) + ' words.')
 
 ## CREATE PARTS OF SPEECH
-df['pos'] = df['parola'].apply(lambda x: nlp(x)[0].pos_)
+df['pos'] = df['lemma'].apply(lambda x: nlp(x)[0].pos_)
 
 # Create elimination table
 df_elim = df.head(0)

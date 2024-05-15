@@ -4,7 +4,7 @@ from google.cloud import translate_v2 as translate
 import os
 from dotenv import load_dotenv
 
-nlp = spacy.load('it_core_news_md')
+nlp = spacy.load('it_core_news_lg')
 
 # Load environment variables from .env file
 load_dotenv()  
@@ -21,6 +21,9 @@ print("Lemmatizing...")
 df['lemma'] = df['parola'].apply(lambda x: nlp(x)[0].lemma_)
 print("Done lemmatizing.")
 
+print(df[df.isna().any(axis=1)])
+df = df.dropna()  # Remove any rows with NaN values
+
 ## Translate to ENGLISH AND SPANISH
 translate_client = translate.Client()  # Assumes environment variable is set for auth
 print('Translating...')
@@ -32,7 +35,6 @@ total_entries = len(df)
 maximum_words_per_request = 128
 
 inglese_list = []
-spagnolo_list = []
 italiano_rev_list = []
 index = 0
 new_index = 0
@@ -45,16 +47,12 @@ while index < total_entries:
     inglese_trans = [trans['translatedText'] for trans in inglese]
     inglese_list.extend(inglese_trans)
     
-    spagnolo = translate_client.translate(parole[index : new_index], target_language='es', source_language='it')
-    spagnolo_list.extend([trans['translatedText'] for trans in spagnolo])
-
     italiano_rev = translate_client.translate(inglese_trans, target_language='it', source_language='en')
     italiano_rev_list.extend([trans['translatedText'] for trans in italiano_rev])
 
     index = new_index
 
 df['inglese'] = inglese_list
-df['spagnolo'] = spagnolo_list
 df['it_reverse'] = italiano_rev_list
 
 df.to_csv('parole_italiane.csv', index=False)
