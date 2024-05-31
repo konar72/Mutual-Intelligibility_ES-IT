@@ -6,6 +6,35 @@ from Levenshtein import distance #pip install python-Levenshtein
 from google.cloud import translate_v2 as translate
 import os
 from dotenv import load_dotenv
+import nltk
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+from nltk.corpus import wordnet as wn
+
+def get_synonyms(word, lang='ita'):
+    synsets = wn.synsets(word, lang=lang)
+    synonyms = set()
+    for synset in synsets:
+        for lemma in synset.lemmas(lang=lang):
+            synonyms.add(lemma.name())
+    return synonyms
+
+
+def is_mutually_intelligible(lemma_ita, lemma_spa, threshold=0.8):
+    # Get synonyms
+    # synonyms_ita = get_synonyms(lemma_ita, lang='ita')
+    synonyms_spa = get_synonyms(lemma_spa, lang='spa')
+    # Add the original lemmas to their synonym sets
+    synonyms_ita = [lemma_ita]
+    synonyms_spa.add(lemma_spa)
+    
+    for syn_ita in synonyms_ita:
+        for syn_spa in synonyms_spa:
+            nl = normalized_levenshtein(syn_ita, syn_spa)
+            if nl >= threshold:
+                print(lemma_ita + ": " + lemma_spa + " (" + syn_spa + ") "+ str(nl))
+                return True, lemma_ita, lemma_spa
+    return False, lemma_ita, lemma_spa
 
 def remove_accents(input_str):
     # Normalize characters to NFKD form which separates characters from their accents
@@ -22,7 +51,7 @@ def normalized_levenshtein(source, target):
 # Function to remove unwanted words
 def remove_unwanted_words(text):
     # Words to filter out
-    filter_out = ['yo', 'tu', 'usted', 'nosotros', 'vosotros', 'vos', 'ellos', 'ella', 'el']
+    filter_out = ['yo', 'tu', 'tú', 'usted', 'nosotros', 'vosotros', 'vos', 'ellos', 'ella', 'el']
     # Split the text into words
     words = text.split()
     # Filter words to exclude those in filter_out
@@ -65,8 +94,8 @@ def spanishify(text):
         text = text[:-4] + 'ion'
     if text.endswith('enza'):
         text = text[:-4] + 'encia'
-    if pre != text:
-        print(pre, text)
+    # if pre != text:
+    #     print(pre, text)
     return text
 
 
@@ -87,8 +116,8 @@ else:
 
     # LEMMATIZE SPANISH
     translate_client = translate.Client()  # Assumes environment variable is set for auth
-    lemma = df['lemma'].to_list()
-    total_entries = len(lemma)
+    sp = df['parola'].to_list()
+    total_entries = len(sp)
     maximum_words_per_request = 128
     spagnolo_list = []
     index = 0
@@ -97,8 +126,8 @@ else:
         new_index = index + maximum_words_per_request
         if new_index > total_entries:
             new_index = total_entries
-        print(lemma[index : new_index])
-        spagnolo = translate_client.translate(lemma[index : new_index], target_language='es', source_language='it')
+        print(sp[index : new_index])
+        spagnolo = translate_client.translate(sp[index : new_index], target_language='es', source_language='it')
         spagnolo_list.extend([trans['translatedText'] for trans in spagnolo])
 
         index = new_index
@@ -148,9 +177,31 @@ df[i_elim].to_csv("temp/elim_levenshtein.csv", index=False)
 df[i_elim].drop(columns=['it_spanishify','temp_nfkd_it', 'temp_nfkd_es','levenshtein']).to_csv("temp/mutually_intelligible.csv", mode = 'a', index = False, header = False)
 
 df = df[~i_elim]
+print(len(df))
 
 # Remove temp columns
 # df.drop(columns=['temp_nfkd_it','temp_nfkd_es'])
+
+threshold = 0.8  # Define your normalized Levenshtein distance threshold
+
+mutually_intelligible_pairs = []
+non_intelligible_pairs = []
+for index, row in df.iterrows():
+    lemma_ita = row['lemma']
+    lemma_spa = row['lemma_es']
+    if is_mutually_intelligible(lemma_ita, lemma_spa, threshold):
+        mutually_intelligible_pairs.append(row)
+    else:
+        print("no")
+        non_intelligible_pairs.append(row)
+
+# Convert lists to pandas DataFrames
+df_mutually_intelligible = pd.DataFrame(mutually_intelligible_pairs)
+df_non_intelligible = pd.DataFrame(non_intelligible_pairs)
+print(len(df_mutually_intelligible))
+# Save to CSV files
+df_mutually_intelligible.to_csv('mutually_intelligible_pairs.csv', index=False)
+df_non_intelligible.to_csv('non_intelligible_pairs.csv', index=False)
 
 # SAVE
 df = df.sort_values(by='levenshtein', ascending=False)

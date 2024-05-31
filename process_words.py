@@ -11,9 +11,11 @@ df.drop(columns='frequenza',inplace=True)
 # Words that are the same, just different conjugations or plural/singular, etc.
 # This is by far the most impactful filter to reduce the list.
 print('Removing repeated lemmas (total words: ' + str(len(df)) + ')...')
+
 df['lemma'] = df['lemma'].apply(lambda x: x.split(' ',1)[0])
 df = df.sort_values(by='rango').drop_duplicates(subset='lemma', keep='first')
 df = df[df['lemma'].str.strip().astype(bool)]
+
 print('Reduced list to: ' + str(len(df)) + ' words.')
 
 ## CREATE PARTS OF SPEECH
