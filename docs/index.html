@@ -51,36 +51,35 @@
   }
   header a { color: var(--accent); }
   header a:hover { color: var(--accent-hover); }
-  .controls {
-    max-width: 900px;
-    margin: 0 auto 1rem;
-    padding: 0 1rem;
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-  .controls input[type="search"] {
-    flex: 1;
-    min-width: 200px;
-    padding: 0.6rem 1rem;
-    border: 1px solid var(--border);
+  header button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  header button:hover { background: var(--accent-hover); color: var(--bg); }
+  .filter-row td {
+    padding: 0.3rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface2);
+  }
+  .filter-row select {
+    width: 100%;
+    padding: 0.3rem 0.4rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.8rem;
     background: var(--input-bg);
     color: var(--text);
   }
-  .controls select {
-    padding: 0.6rem 0.75rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-size: 0.95rem;
-    background: var(--input-bg);
-    color: var(--text);
-  }
-  .controls input:focus, .controls select:focus {
+  .filter-row select:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
   }
   .result-count {
     max-width: 900px;
@@ -150,7 +149,6 @@
   @media (max-width: 600px) {
     header h1 { font-size: 1.6rem; }
     header .subtitle { font-size: 0.95rem; }
-    .controls { flex-direction: column; }
   }
 </style>
 </head>
@@ -163,16 +161,10 @@
     Created by <a href="https://github.com/konar72">A. Konar</a>
     <br>
     For more information on this project, or to provide feedback, please visit the <a href="https://github.com/konar72/Italian">GitHub repository</a>
-    <br><br>
+    <br>
+    <button id="download-csv">Download as CSV</button>
   </p>
 </header>
-
-<div class="controls">
-  <input type="search" id="search" placeholder="Search Italian or Spanish…" autocomplete="off">
-  <select id="pos-filter">
-    <option value="">All parts of speech</option>
-  </select>
-</div>
 
 <div class="result-count" id="result-count"></div>
 
@@ -180,11 +172,20 @@
   <table>
     <thead>
       <tr>
-        <th data-col="rango">Italian Frequency Rank<span class="arrow"></span></th>
+        <th data-col="rango">Rank<span class="arrow"></span></th>
         <th data-col="parola">Italiano<span class="arrow"></span></th>
         <th data-col="spagnolo">Español<span class="arrow"></span></th>
         <th data-col="pos">POS<span class="arrow"></span></th>
-        <th data-col="levenshtein">Similarity<span class="arrow"></span></th>
+        <th data-col="match_type">Match Type<span class="arrow"></span></th>
+        <th data-col="score">Score<span class="arrow"></span></th>
+      </tr>
+      <tr class="filter-row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><select id="pos-filter"><option value="">All</option></select></td>
+        <td><select id="match-filter"><option value="">All</option></select></td>
+        <td></td>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -212,8 +213,18 @@ async function init() {
     posFilter.appendChild(opt);
   });
 
-  document.getElementById('search').addEventListener('input', render);
+  // Match type filter options
+  const matchSet = new Set(DATA.map(d => d.match_type).filter(Boolean));
+  const matchFilter = document.getElementById('match-filter');
+  [...matchSet].sort().forEach(mt => {
+    const opt = document.createElement('option');
+    opt.value = mt;
+    opt.textContent = mt;
+    matchFilter.appendChild(opt);
+  });
+
   document.getElementById('pos-filter').addEventListener('change', render);
+  document.getElementById('match-filter').addEventListener('change', render);
 
   // Column header sorting
   document.querySelectorAll('th[data-col]').forEach(th => {
@@ -223,7 +234,7 @@ async function init() {
         sortAsc = !sortAsc;
       } else {
         sortCol = col;
-        sortAsc = (col === 'levenshtein') ? false : true;
+        sortAsc = (col === 'score') ? false : true;
       }
       render();
     });
@@ -246,26 +257,21 @@ function updateSortArrows() {
 }
 
 function render() {
-  const query = document.getElementById('search').value.toLowerCase().trim();
   const posVal = document.getElementById('pos-filter').value;
+  const matchVal = document.getElementById('match-filter').value;
 
   filtered = DATA.filter(d => {
     if (posVal && d.pos !== posVal) return false;
-    if (query) {
-      return d.parola.toLowerCase().includes(query)
-        || d.spagnolo.toLowerCase().includes(query)
-        || (d.lemma && d.lemma.toLowerCase().includes(query))
-        || (d.lemma_es && d.lemma_es.toLowerCase().includes(query));
-    }
+    if (matchVal && d.match_type !== matchVal) return false;
     return true;
   });
 
   // Sort
   const dir = sortAsc ? 1 : -1;
-  if (sortCol === 'rango' || sortCol === 'levenshtein') {
+  if (sortCol === 'rango' || sortCol === 'score') {
     filtered.sort((a, b) => dir * ((a[sortCol] || 0) - (b[sortCol] || 0)));
-  } else if (sortCol === 'pos') {
-    filtered.sort((a, b) => dir * (a.pos || '').localeCompare(b.pos || ''));
+  } else if (sortCol === 'pos' || sortCol === 'match_type') {
+    filtered.sort((a, b) => dir * (a[sortCol] || '').localeCompare(b[sortCol] || ''));
   } else {
     filtered.sort((a, b) => dir * (a[sortCol] || '').localeCompare(b[sortCol] || ''));
   }
@@ -293,14 +299,14 @@ function render() {
       }
     });
     const sentinel = document.createElement('tr');
-    sentinel.innerHTML = '<td colspan="5" style="height:1px;border:none"></td>';
+    sentinel.innerHTML = '<td colspan="6" style="height:1px;border:none"></td>';
     tbody.appendChild(sentinel);
     observer.observe(sentinel);
   }
 }
 
 function rowHTML(d) {
-  const lev = d.levenshtein;
+  const lev = d.score;
   const levPct = lev != null ? Math.round(lev * 100) : null;
   const levDisplay = levPct != null
     ? `<span class="lev-bar" style="width:${levPct * 0.6}px"></span>${levPct}%`
@@ -310,6 +316,7 @@ function rowHTML(d) {
     <td><strong>${esc(d.parola)}</strong></td>
     <td>${esc(d.spagnolo)}</td>
     <td><span class="pos-tag">${esc(d.pos)}</span></td>
+    <td>${esc(d.match_type)}</td>
     <td>${levDisplay}</td>
   </tr>`;
 }
@@ -318,6 +325,27 @@ function esc(s) {
   if (!s) return '';
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
+
+function downloadCSV() {
+  const cols = ['rango', 'parola', 'spagnolo', 'pos', 'match_type', 'score'];
+  const header = ['Rank', 'Italian', 'Spanish', 'POS', 'Match Type', 'Score'];
+  const rows = filtered.map(d => cols.map(c => {
+    const v = d[c];
+    if (v == null) return '';
+    const s = String(v);
+    return s.includes(',') || s.includes('"') ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }).join(','));
+  const csv = [header.join(','), ...rows].join('\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'italian_spanish_intelligibility.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById('download-csv').addEventListener('click', downloadCSV);
 
 init();
 </script>

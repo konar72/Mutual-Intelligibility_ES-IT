@@ -35,7 +35,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 71,anche,anche,Also,ADV,también,también,ADV,anche,tambien,anche,0.1428571428571429
 72,detto,dire,said,VERB,dicho,dicho,ADJ,dire,dicho,dir,0.4
 73,quello,quello,that,PRON,eso,ese,PRON,quello,eso,quello,0.33333333333333337
-74,va,andare,it goes,VERB,va,ir,VERB,andare,va,andar,0.19999999999999996
 75,niente,niente,Nothing,PRON,nada,nada,PRON,niente,nada,niente,0.16666666666666663
 76,grazie,grazie,Thank you,NOUN,gracias,gracias,NOUN,grazie,gracias,grazie,0.5714285714285714
 77,lui,lui,he,PRON,él,él,PRON,lui,el,lui,0.0
@@ -51,7 +50,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 100,ancora,ancora,Still,ADV,aún,aún,ADV,ancora,aun,ancora,0.16666666666666663
 101,qualcosa,qualcosa,something,PRON,algo,algo,PRON,qualcosa,algo,qualcosa,0.375
 102,vero,vero,True,ADJ,verdadero,verdadero,ADJ,vero,verdadero,vero,0.4444444444444444
-103,casa,casa,home,NOUN,hogar,hogar,NOUN,casa,hogar,casa,0.19999999999999996
 105,su,su,on,ADP,en,en,ADP,su,en,su,0.0
 108,forse,forse,Perhaps,ADV,tal vez,tal,NOUN,forse,tal vez,forse,0.1428571428571429
 113,altro,altro,other,PRON,otro,otro,DET,altro,otro,altro,0.6
@@ -96,13 +94,10 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 193,ehi,ehi,Hey,INTJ,ey,ey,INTJ,ehi,ey,ehi,0.33333333333333337
 202,qualche,qualche,some,DET,alguno,alguno,PRON,qualche,alguno,qualche,0.1428571428571429
 203,sembra,sembrare,it seems,VERB,parece,parecer,VERB,sembrare,parece,sembrar,0.0
-206,modo,modo,way,NOUN,forma,forma,NOUN,modo,forma,modo,0.19999999999999996
 207,tre,tre,Three,NUM,tres,tres,NUM,tre,tres,tre,0.75
 209,prego,pregare,Please,VERB,por favor,por,ADP,pregare,por favor,pregar,0.4444444444444444
 210,parlare,parlare,speak,VERB,hablar,hablar,VERB,parlare,hablar,parlar,0.6666666666666667
-211,mamma,mamma,mom,NOUN,mamá,mamá,NOUN,mamma,mama,mamma,0.6
 212,guarda,guardare,Look,VERB,mirar,mirar,VERB,guardare,mirar,guardar,0.4285714285714286
-214,grande,grande,great,ADJ,excelente,excelente,ADJ,grande,excelente,grande,0.2222222222222222
 215,lì,lì,there,ADV,allá,allá,ADV,li,alla,lì,0.25
 218,avanti,avanti,after you,ADV,después de,después,ADV,avanti,despues de,avanti,0.0
 220,successo,successo,success,NOUN,éxito,éxito,NOUN,successo,exito,successo,0.125
@@ -110,7 +105,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 227,nostro,nostro,our,DET,nuestro,nuestro,DET,nostro,nuestro,nostro,0.7142857142857143
 231,forza,forza,Force,NOUN,fuerza,fuerza,NOUN,forza,fuerza,forza,0.6666666666666667
 232,piace,piacere,pleases,NOUN,agrada,agradar,VERB,piacere,agrada,piacer,0.0
-233,bella,bello,Pretty,ADJ,bonito,bonito,ADJ,bello,bonito,bello,0.33333333333333337
 235,soldi,soldo,money,NOUN,dinero,dinero,NOUN,soldo,dinero,soldo,0.16666666666666663
 240,dispiace,dispiacere,sorry,NOUN,lo siento,él,PRON,dispiacere,lo siento,dispiacer,0.11111111111111116
 241,subito,subito,right away,ADV,de inmediato,de,ADP,subito,de inmediato,subito,0.25
@@ -124,7 +118,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 258,amore,amore,Love,NOUN,amar,amar,VERB,amore,amar,amore,0.6
 259,moglie,moglie,wife,NOUN,esposa,esposa,NOUN,moglie,esposa,moglie,0.0
 260,sicuro,sicuro,Safe,ADJ,seguro,seguro,ADJ,sicuro,seguro,sicuro,0.6666666666666667
-262,penso,pensare,I think,VERB,creo,creer,VERB,pensare,creo,pensar,0.0
 263,paura,paura,fear,NOUN,miedo,miedo,NOUN,paura,miedo,paura,0.0
 265,testa,testa,head,NOUN,cabeza,cabeza,NOUN,testa,cabeza,testa,0.16666666666666663
 267,giusto,giusto,Right,ADJ,bien,bien,ADV,giusto,bien,giusto,0.16666666666666663
@@ -133,7 +126,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 274,basta,bastare,Enough,VERB,suficiente,suficiente,ADJ,bastare,suficiente,bastar,0.0
 276,stesso,stesso,same,ADJ,mismo,mismo,DET,stesso,mismo,stesso,0.33333333333333337
 278,porta,portare,brings,VERB,trae,traer,VERB,portare,trae,portar,0.33333333333333337
-281,buona,buono,Good,ADJ,bien,bien,ADV,buono,bien,buono,0.4
 282,quindi,quindi,Therefore,ADV,por lo tanto,por,ADP,quindi,por lo tanto,quindi,0.08333333333333337
 284,appena,appena,as soon as,ADV,tan pronto como,tan,NOUN,appena,tan pronto como,appena,0.19999999999999996
 286,ragione,ragione,reason,NOUN,razón,razón,NOUN,ragione,razon,ragion,0.5
@@ -145,7 +137,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 297,ciò,ciò,that is,PRON,eso es,ese,PRON,cio,eso es,ciò,0.0
 299,capito,capire,Understood,VERB,comprendido,comprendido,ADJ,capire,comprendido,capir,0.2727272727272727
 300,succede,succedere,happens,VERB,sucede,suceder,VERB,succedere,sucede,succeder,0.75
-301,preso,prendere,taken ,VERB,tomado,tomar,VERB,prendere,tomado,prender,0.1428571428571429
 304,morto,morire,died,VERB,fallecido,fallecido,ADJ,morire,fallecido,morir,0.11111111111111116
 306,capitano,capitano,captain,NOUN,capitán,capitán,NOUN,capitano,capitan,capitano,0.75
 307,letto,leggere,Bed,VERB,cama,cama,NOUN,leggere,cama,legger,0.0
@@ -158,7 +149,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 319,qua,qua,here,ADV,aquí,aquí,ADV,qua,aqui,qua,0.5
 323,cazzo,cazzo,fuck,NOUN,mierda,mierda,NOUN,cazzo,mierda,cazzo,0.0
 325,nulla,nulla,Nothing,PRON,nada,nada,PRON,nulla,nada,nulla,0.4
-327,persone,persona,people,NOUN,gente,gente,NOUN,persona,gente,persona,0.1428571428571429
 331,dato,dare,given,VERB,dado,dar,VERB,dare,dado,dar,0.5
 332,secondo,secondo,second,ADJ,segundo,segundo,ADJ,secondo,segundo,secondo,0.7142857142857143
 333,film,film,movie,NOUN,película,película,NOUN,film,pelicula,film,0.125
@@ -172,7 +162,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 352,scusi,scusire,Excuse me,VERB,disculpe,disculpe,VERB,scusire,disculpe,scusir,0.375
 353,primo,primo,first,ADJ,primero,primero,ADJ,primo,primero,primo,0.7142857142857143
 355,salve,salvo,Greetings,ADJ,saludos,saludo,NOUN,salvo,saludos,salvo,0.5714285714285714
-356,nave,nave,ship,NOUN,barco,barco,NOUN,nave,barco,nave,0.19999999999999996
 358,sera,sera,evening,NOUN,noche,noche,NOUN,sera,noche,sera,0.0
 359,piano,piano,floor,NOUN,piso,piso,NOUN,piano,piso,piano,0.6
 361,macchina,macchina,machine,NOUN,máquina,máquina,NOUN,macchina,maquina,macchina,0.5
@@ -214,7 +203,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 444,cercando,cercare,looking for,VERB,buscando,buscar,VERB,cercare,buscando,cercar,0.25
 446,verità,verità,truth,NOUN,verdad,verdad,NOUN,verita,verdad,verità,0.5
 449,re,Re,king,NOUN,rey,rey,NOUN,Re,rey,Re,0.33333333333333337
-454,amo,amare,I love,VERB,amo,amar,VERB,amare,amo,amar,0.5
 455,chiesto,chiedere,asked,VERB,preguntó,preguntar,VERB,chiedere,pregunto,chieder,0.0
 456,cosi,coe,Like this,ADP,como esto,como,SCONJ,coe,como esto,coe,0.33333333333333337
 458,felice,felice,happy,ADJ,feliz,feliz,ADJ,felice,feliz,felice,0.6666666666666667
@@ -234,7 +222,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 482,almeno,almeno,at least,ADV,al menos,al,ADP,almeno,al menos,almeno,0.75
 483,dica,dicere,say,VERB,decir,decir,VERB,dicere,decir,dicer,0.6
 484,lascia,lasciare,leaves,VERB,hojas,hoja,NOUN,lasciare,hojas,lasciar,0.1428571428571429
-488,entrare,entrare,enter,VERB,ingresar,ingresar,VERB,entrare,ingresar,entrar,0.5
 489,ricordo,ricordare,I remember,VERB,recuerdo,recordar,VERB,ricordare,recuerdo,ricordar,0.375
 490,pace,pacere,peace,NOUN,paz,paz,NOUN,pacere,paz,pacer,0.4
 491,roba,roba,stuff,NOUN,cosa,cosa,NOUN,roba,cosa,roba,0.5
@@ -253,7 +240,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 526,dammi,dammi,give me,VERB,dame,dame,VERB,dammi,dame,dammi,0.6
 529,fuoco,fuoco,fire,NOUN,fuego,fuego,NOUN,fuoco,fuego,fuoco,0.6
 531,mangiare,mangiare,eat,VERB,comer,comer,VERB,mangiare,comer,mangiar,0.1428571428571429
-534,serio,serio,serious,ADJ,grave,grave,ADJ,serio,grave,serio,0.0
 535,paese,paese,village,NOUN,aldea,aldea,NOUN,paese,aldea,paese,0.19999999999999996
 538,mezzo,mezzo,half,NOUN,medio,medio,NUM,mezzo,medio,mezzo,0.6
 539,prova,provare,trial,VERB,ensayo,ensayo,NOUN,provare,ensayo,provar,0.0
@@ -312,14 +298,12 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 666,lasci,Lasci,leave,VERB,dejar,dejar,VERB,Lasci,dejar,Lasci,0.0
 668,chiaro,chiaro,clear,ADJ,claro,claro,ADJ,chiaro,claro,chiaro,0.6666666666666667
 670,squadra,squadra,squad,NOUN,equipo,equipo,NOUN,squadra,equipo,squadra,0.2857142857142857
-671,attento,attento,careful,ADJ,cuidadoso,cuidadoso,ADJ,attento,cuidadoso,attento,0.11111111111111116
 673,ordine,ordine,order,NOUN,orden,orden,NOUN,ordine,orden,ordine,0.6666666666666667
 675,arrivederci,arrivedere,Until we meet again,VERB,hasta que nos encontremos de nuevo,hasta,ADP,arrivedere,hasta que nos encontremos de nuevo,arriveder,0.11764705882352944
 679,ormai,ormai,at this point,ADV,en este punto,en,ADP,ormai,en este punto,ormai,0.0
 680,maggiore,maggiore,greater,ADJ,mayor que,mayor,ADJ,maggiore,mayor que,maggiore,0.33333333333333337
 681,fretta,fretta,rush,NOUN,correr,correr,VERB,fretta,correr,fretta,0.0
 682,sarai,saere,you will be,VERB,será,ser,AUX,saere,sera,saer,0.5
-683,sacco,sacco,sack,NOUN,bolsa,bolsa,NOUN,sacco,bolsa,sacco,0.0
 687,colpo,colpo,hit,NOUN,golpear,golpear,VERB,colpo,golpear,colpo,0.4285714285714286
 688,sarei,sarei,I would be,AUX,sería,ser,AUX,sarei,seria,sarei,0.4
 690,caffè,caffè,coffee,NOUN,café,café,NOUN,caffe,cafe,cafè,0.75
@@ -335,7 +319,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 727,matrimonio,matrimonio,marriage,NOUN,casamiento,casamiento,NOUN,matrimonio,casamiento,matrimonio,0.30000000000000004
 730,aspetti,aspetto,wait,NOUN,esperar,esperar,VERB,aspetto,esperar,aspetto,0.4285714285714286
 733,guai,guaio,trouble,NOUN,problema,problema,NOUN,guaio,problema,guaio,0.0
-735,motivo,motivo,reason,NOUN,razón,razón,NOUN,motivo,razon,motivo,0.0
 737,inizio,inizio,start,NOUN,comenzar,comenzar,VERB,inizio,comenzar,inicio,0.0
 738,smettila,Smettila,stop that,PROPN,para,para,ADP,Smettila,para,Smettila,0.125
 739,diventare,diventare,become,VERB,convertirse,convertir él,VERB,diventare,convertirse,diventar,0.36363636363636365
@@ -367,7 +350,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 811,farai,farai,you will do,VERB,harás,harás,VERB,farai,haras,farai,0.4
 813,buonanotte,buonanotta,Good night,ADJ,buenas noches,buena,ADJ,buonanotta,buenas noches,buonanotta,0.46153846153846156
 815,prossima,prossimo,next,ADJ,próximo,próximo,ADJ,prossimo,proximo,prossimo,0.625
-817,specie,specie,species,NOUN,especies,especie,NOUN,specie,especies,specie,0.75
 820,circa,circa,about,ADV,acerca de,acerca,ADV,circa,acerca de,circa,0.4444444444444444
 821,funziona,funzionare,works,VERB,obras,obra,NOUN,funzionare,obras,funzionar,0.11111111111111116
 823,brutto,brutto,ugly,ADJ,feo,feo,ADJ,brutto,feo,brutto,0.16666666666666663
@@ -385,8 +367,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 851,oltre,oltre,beyond,ADV,más allá de,más,ADV,oltre,mas alla de,oltre,0.18181818181818177
 855,messaggio,messaggio,message,NOUN,mensaje,mensaje,NOUN,messaggio,mensaje,messaggio,0.4444444444444444
 856,giornata,giornata,day,NOUN,día,día,NOUN,giornata,dia,giornata,0.125
-858,energia,energia,power,NOUN,fuerza,fuerza,NOUN,energia,fuerza,energia,0.4285714285714286
-860,sala,sala,room,NOUN,habitación,habitación,NOUN,sala,habitacion,sala,0.19999999999999996
 861,mandato,mandare,mandate,VERB,mandato,mandato,NOUN,mandare,mandato,mandar,0.7142857142857143
 864,libero,libero,free,ADJ,gratis,gratis,PROPN,libero,gratis,libero,0.0
 865,aereo,aereo,airplane,NOUN,avión,avión,NOUN,aereo,avion,aereo,0.19999999999999996
@@ -394,15 +374,12 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 872,stronzo,stronzo,asshole,VERB,estúpido,estúpido,ADJ,stronzo,estupido,stronzo,0.375
 873,mostro,mostro,monster,NOUN,monstruo,monstruo,NOUN,mostro,monstruo,mostro,0.75
 874,sette,sette,seven,NUM,siete,siete,NUM,sette,siete,sette,0.6
-878,programma,programma,plan,NOUN,plan,plan,PROPN,programma,plan,programma,0.2222222222222222
 882,partita,partita,match,NOUN,fósforo,fósforo,NOUN,partita,fosforo,partita,0.0
 883,gentile,gentile,Kind,ADJ,amable,amable,ADJ,gentile,amable,gentile,0.2857142857142857
-890,domande,domanda,requests,NOUN,peticiones,petición,NOUN,domanda,peticiones,domanda,0.09999999999999998
 891,peggio,peggio,worse,ADV,peor,peor,ADJ,peggio,peor,peggio,0.33333333333333337
 893,genitori,genitore,parents,NOUN,padres,padre,NOUN,genitore,padres,genitore,0.125
 895,solito,solito,usual,ADJ,habitual,habitual,ADJ,solito,habitual,solito,0.25
 896,anima,anima,soul,NOUN,alma,alma,NOUN,anima,alma,anima,0.6
-897,terribile,terribile,terrible,ADJ,horrible,horrible,ADJ,terribile,horrible,terrible,0.75
 898,buonasera,Buonasera,Good evening,PROPN,buenas noches,buena,ADJ,Buonasera,buenas noches,Buonasera,0.3076923076923077
 904,pieno,pieno,full,ADJ,lleno,lleno,ADJ,pieno,lleno,pieno,0.6
 905,rapporto,rapporto,relationship,NOUN,relación,relación,NOUN,rapporto,relacion,rapporto,0.125
@@ -415,11 +392,9 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 918,ottimo,ottimo,Optimal,ADJ,óptimo,óptimo,ADJ,ottimo,optimo,ottimo,0.6666666666666667
 920,esercito,esercito,army,NOUN,ejército,ejército,NOUN,esercito,ejercito,esercito,0.75
 926,chiunque,chiunque,whoever,PRON,quien,quien,PRON,chiunque,quien,chiunque,0.25
-927,vale,valere,it&#39;s worth it,VERB,vale la pena,valer,VERB,valere,vale la pena,valer,0.33333333333333337
 929,milioni,milione,millions,NOUN,millones,millón,NOUN,milione,millones,milion,0.625
 930,cibo,cibo,food,NOUN,alimento,alimento,NOUN,cibo,alimento,cibo,0.25
 934,laggiù,laggiù,over there,ADV,allí,allí,ADV,laggiu,alli,laggiù,0.16666666666666663
-935,intorno,intorno,environment,ADV,ambiente,ambiente,NOUN,intorno,ambiente,intorno,0.125
 937,chiave,chiave,key,NOUN,llave,llave,NOUN,chiave,llave,chiave,0.5
 939,diritto,diritto,right,NOUN,bien,bien,ADV,diritto,bien,diritto,0.1428571428571429
 940,dimenticato,dimenticare,forgotten,VERB,olvidado,olvidado,ADJ,dimenticare,olvidado,dimenticar,0.09999999999999998
@@ -437,7 +412,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 970,incontro,incontro,encounter,NOUN,encontrar,encontrar,VERB,incontro,encontrar,incontro,0.6666666666666667
 972,occhiata,occhiato,look,VERB,mirar,mirar,VERB,occhiato,mirar,occhiato,0.125
 974,cioè,cioè,Meaning what,CCONJ,que quieres decir,que,SCONJ,cioe,que quieres decir,cioè,0.05882352941176472
-976,notizie,notizia,news,NOUN,noticias,noticia,NOUN,notizia,noticias,notizia,0.75
 977,sorpresa,sorprendere,surprise,VERB,sorpresa,sorpresa,NOUN,sorprendere,sorpresa,sorprender,0.6
 979,salute,salute,Health,NOUN,salud,salud,NOUN,salute,salud,salute,0.6666666666666667
 980,lettera,lettera,letter,NOUN,carta,carta,NOUN,lettera,carta,lettera,0.2857142857142857
@@ -445,7 +419,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 984,mica,mica,not,ADV,no,no,ADV,mica,no,mica,0.0
 987,aiutare,aiutare,help,VERB,ayuda,ayuda,NOUN,aiutare,ayuda,aiutar,0.5
 988,sinistra,sinistra,left,NOUN,izquierda,izquierdo,ADJ,sinistra,izquierda,sinistra,0.2222222222222222
-990,contento,contento,happy,ADJ,feliz,feliz,ADJ,contento,feliz,contento,0.125
 991,canzone,canzone,song,NOUN,canción,canción,NOUN,canzone,cancion,canzone,0.4285714285714286
 999,gruppo,Gruppo,group,PROPN,grupo,grupo,NOUN,Gruppo,grupo,Gruppo,0.6666666666666667
 1000,giuro,giurare,I swear,VERB,lo juro,él,PRON,giurare,lo juro,giurar,0.1428571428571429
@@ -453,7 +426,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1006,missione,missione,mission,NOUN,misión,misión,NOUN,missione,mision,mission,0.7142857142857143
 1007,dunque,dunque,so,ADV,entonces,entonces,ADV,dunque,entonces,dunque,0.125
 1009,pranzo,pranzo,lunch,NOUN,almuerzo,almuerzo,NOUN,pranzo,almuerzo,pranzo,0.25
-1013,medico,medico,doctor,NOUN,doctor,doctor,NOUN,medico,doctor,medico,0.16666666666666663
 1014,parigi,Parigi,Paris,PROPN,parís,parís,PROPN,Parigi,paris,Parigi,0.33333333333333337
 1018,diverso,diverso,different,ADJ,diferente,diferente,ADJ,diverso,diferente,diverso,0.4444444444444444
 1022,sesso,sesso,sex,NOUN,sexo,sexo,NOUN,sesso,sexo,sesso,0.6
@@ -492,7 +464,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1080,affatto,affatto,at all,ADV,en absoluto,en,ADP,affatto,en absoluto,afatto,0.2727272727272727
 1081,insomma,insomma,In short,ADV,en breve,en,ADP,insomma,en breve,insomma,0.125
 1082,caldo,caldo,heat,ADJ,calor,calor,NOUN,caldo,calor,caldo,0.6
-1083,zona,zona,area,NOUN,área,área,NOUN,zona,area,zona,0.25
 1086,spettacolo,spettacolo,show,NOUN,espectáculo,espectáculo,NOUN,spettacolo,espectaculo,spettacolo,0.6363636363636364
 1087,metà,metà,half,NOUN,medio,medio,NUM,meta,medio,metà,0.4
 1088,eccolo,eccolo,there he is,ADV,ahi esta,ahi,PROPN,eccolo,ahi esta,eccolo,0.0
@@ -511,7 +482,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1113,regina,reginare,Queen,VERB,reina,reina,NOUN,reginare,reina,reginar,0.7142857142857143
 1115,sud,sud,south,NOUN,sur,sur,NOUN,sud,sur,sud,0.6666666666666667
 1116,intendo,intendere,I intend,VERB,pretendo,pretender,VERB,intendere,pretendo,intender,0.375
-1118,passi,passo,steps,NOUN,pasos,paso,NOUN,passo,pasos,passo,0.6
 1121,sposato,sposare,married,VERB,casado,casado,ADJ,sposare,casado,sposar,0.16666666666666663
 1123,gamba,gamba,leg,NOUN,pierna,pierna,NOUN,gamba,pierna,gamba,0.16666666666666663
 1126,chiesa,chiesa,church,NOUN,iglesia,iglesia,PROPN,chiesa,iglesia,chiesa,0.4285714285714286
@@ -540,7 +510,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1205,sappia,sappia,know,VERB,saber,saber,AUX,sappia,saber,sappia,0.33333333333333337
 1208,cucina,cucinare,Kitchen,VERB,cocina,cocina,NOUN,cucinare,cocina,cucinar,0.7142857142857143
 1210,tale,tale,such,DET,semejante,semejante,ADJ,tale,semejante,tal,0.11111111111111116
-1211,soldati,soldato,soldiers,NOUN,soldados,soldado,NOUN,soldato,soldados,soldato,0.75
 1212,lascio,lascio,I leave,VERB,dejo,dejar,VERB,lascio,dejo,lascio,0.16666666666666663
 1213,chissà,chissà,maybe,ADV,tal vez,tal,NOUN,chissa,tal vez,chissà,0.0
 1215,fallo,fallo,just do it,NOUN,hazlo,hacer él,VERB,fallo,hazlo,fallo,0.6
@@ -561,14 +530,11 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1240,età,età,age,NOUN,edad,edad,NOUN,eta,edad,età,0.25
 1242,passaggio,passaggio,ride,NOUN,conducir,conducir,VERB,passaggio,conducir,passaggio,0.11111111111111116
 1246,segno,segno,sign,NOUN,firmar,firmar,VERB,segno,firmar,seno,0.0
-1247,negozio,negozio,shop,NOUN,comercio,comercio,NOUN,negozio,comercio,negozio,0.25
 1248,fiume,Fiume,river,PROPN,río,río,NOUN,Fiume,rio,Fiume,0.0
 1249,ascoltami,ascoltami,listen to me,VERB,escúchame,escúchamir,VERB,ascoltami,escuchame,ascoltami,0.4444444444444444
 1251,sé,sé,self,PRON,ser,ser,AUX,se,ser,sé,0.33333333333333337
 1252,rubato,rubare,stolen,VERB,robado,robado,ADJ,rubare,robado,rubar,0.5
-1256,adoro,adorare,I adore,VERB,adoro,adorar,VERB,adorare,adoro,adorar,0.6666666666666667
 1260,ridere,ridere,LAUGH,VERB,reír,reír,VERB,ridere,reir,rider,0.4
-1261,intero,intero,entire,ADJ,completo,completo,ADJ,intero,completo,intero,0.25
 1267,figliolo,figliolo,son,NOUN,hijo,hijo,NOUN,figliolo,hijo,filliolo,0.25
 1268,cattivo,cattivo,bad,ADJ,malo,malo,ADJ,cattivo,malo,cattivo,0.2857142857142857
 1271,scherzando,scherzare,joking,VERB,bromas,broma,NOUN,scherzare,bromas,scherzar,0.125
@@ -595,7 +561,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1305,venuti,venere,came,NOUN,vino,venir,VERB,venere,vino,vener,0.4
 1309,piú,piú,more,ADV,más,más,ADV,piu,mas,piú,0.0
 1310,scommetto,scommere,I bet,VERB,te apuesto,tú,PRON,scommere,te apuesto,scommer,0.09999999999999998
-1313,incontrato,incontrare,encountered,VERB,encontrado,encontrar,VERB,incontrare,encontrado,incontrar,0.7
 1314,banca,Banca,bank,NOUN,banco,banco,NOUN,Banca,banco,Banca,0.6
 1316,salvare,salvare,to save,VERB,ahorrar,ahorrar,VERB,salvare,ahorrar,salvar,0.2857142857142857
 1318,fiori,fiore,flowers,NOUN,flores,flor,NOUN,fiore,flores,fiore,0.6666666666666667
@@ -612,11 +577,9 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1339,accanto,accanto,next to,ADV,junto a,junto,ADJ,accanto,junto a,accanto,0.1428571428571429
 1340,principessa,principesso,princess,PRON,princesa,princesa,NOUN,principesso,princesa,principesso,0.6363636363636364
 1347,sparato,sparare,shot,VERB,disparo,disparo,NOUN,sparare,disparo,sparar,0.4285714285714286
-1350,bar,bar,Cafe,NOUN,cafetería,cafetería,NOUN,bar,cafeteria,bar,0.2222222222222222
 1352,nato,nascere,born,VERB,nacido,nacido,ADJ,nascere,nacido,nascer,0.33333333333333337
 1353,gioia,gioia,joy,NOUN,alegría,alegría,NOUN,gioia,alegria,gioia,0.1428571428571429
 1354,padrone,padrone,master,NOUN,maestro,maestro,NOUN,padrone,maestro,padrone,0.1428571428571429
-1360,animali,animale,animals,ADJ,animales,animal,NOUN,animale,animales,animal,0.75
 1361,gii,gii,yes,DET,sí,sí,INTJ,gii,si,gii,0.0
 1362,calmati,calmare,take it easy,VERB,tómalo con calma,tómalo,VERB,calmare,tomalo con calma,calmar,0.25
 1363,prometto,promeggere,I promise,VERB,prometo,prometer,VERB,promeggere,prometo,promegger,0.5555555555555556
@@ -628,17 +591,14 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1378,difesa,difesa,defence,NOUN,defensa,defensa,NOUN,difesa,defensa,difesa,0.7142857142857143
 1380,alzati,alzare,get up,VERB,levantarse,levantar él,VERB,alzare,levantarse,alzar,0.30000000000000004
 1382,colazione,colazione,breakfast,NOUN,desayuno,desayuno,NOUN,colazione,desayuno,colacion,0.125
-1386,barca,barca,boat,NOUN,bote,bote,NOUN,barca,bote,barca,0.19999999999999996
 1387,società,società,society,NOUN,sociedad,sociedad,NOUN,societa,sociedad,società,0.625
 1388,lupo,lupo,wolf,NOUN,lobo,lobo,PROPN,lupo,lobo,lupo,0.5
 1389,lezione,lezione,lesson,NOUN,lección,lección,NOUN,lezione,leccion,lezion,0.5714285714285714
 1391,uniti,Uniti,united,PROPN,unido,unido,ADJ,Uniti,unido,Uniti,0.4
-1392,preferisco,preferire,I prefer,VERB,prefiero,preferir,VERB,preferire,prefiero,preferir,0.625
 1394,pelle,pelle,skin,NOUN,piel,piel,NOUN,pelle,piel,pelle,0.4
 1398,combattere,combattere,fight,VERB,luchar,luchar,VERB,combattere,luchar,combatter,0.2222222222222222
 1403,anzi,anzi,On the contrary,ADV,de lo contrario,de,ADP,anzi,de lo contrario,anzi,0.1333333333333333
 1412,amor,amor,love,NOUN,amar,amar,VERB,amor,amar,amor,0.75
-1414,regole,regola,rules,VERB,normas,norma,NOUN,regola,normas,regola,0.0
 1416,effetti,effetto,effects,NOUN,efectos,efecto,NOUN,effetto,efectos,efetto,0.7142857142857143
 1419,soprattutto,soprattutto,above all,ADV,sobre todo,sobre,ADP,soprattutto,sobre todo,soprattutto,0.4545454545454546
 1427,ovunque,ovunque,everywhere,ADV,en todos lados,en,ADP,ovunque,en todos lados,ovunque,0.0714285714285714
@@ -648,7 +608,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1432,codice,codice,code,NOUN,código,código,NOUN,codice,codigo,codice,0.5
 1438,compagno,compagno,company,NOUN,compañía,compañía,NOUN,compagno,compania,compano,0.625
 1442,stamattina,stamattina,this morning,ADV,esta mañana,este,DET,stamattina,esta manana,stamattina,0.5454545454545454
-1444,contrario,contrario,opposite,ADJ,opuesto,opuesto,ADJ,contrario,opuesto,contrario,0.2222222222222222
 1445,terzo,terzo,third,ADJ,tercero,tercero,ADJ,terzo,tercero,terzo,0.5714285714285714
 1447,oddio,oddio,hate,ADJ,odiar,odiar,VERB,oddio,odiar,oddio,0.4
 1449,colpevole,colpevole,guilty,ADJ,culpable,culpable,ADJ,colpevole,culpable,colpevole,0.5555555555555556
@@ -670,7 +629,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1478,pò,pò,bit,ADV,poco,poco,ADV,po,poco,pò,0.25
 1479,lavori,lavoro,jobs,NOUN,trabajos,trabajo,NOUN,lavoro,trabajos,lavoro,0.25
 1482,lingua,linguare,tongue,NOUN,lengua,lengua,NOUN,linguare,lengua,linguar,0.7142857142857143
-1484,cambio,cambio,exchange,NOUN,intercambio,intercambio,NOUN,cambio,intercambio,cambio,0.5454545454545454
 1485,biglietto,biglietto,ticket,NOUN,boleto,boleto,NOUN,biglietto,boleto,billietto,0.5555555555555556
 1486,ristorante,ristorante,restaurant,NOUN,restaurante,restaurante,NOUN,ristorante,restaurante,ristorante,0.7272727272727273
 1489,nascosto,nascondere,hidden,VERB,oculto,oculto,ADJ,nascondere,oculto,nasconder,0.11111111111111116
@@ -701,7 +659,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1548,prezzo,prezzo,price,NOUN,precio,precio,NOUN,prezzo,precio,prezzo,0.6666666666666667
 1550,guida,guida,guide,VERB,guía,guía,NOUN,guida,guia,guida,0.6
 1555,sapevi,sapevi,you knew,VERB,supieras,superar,VERB,sapevi,supieras,sapevi,0.375
-1561,costa,costare,it costs,VERB,cuesta,costar,VERB,costare,cuesta,costar,0.5
 1567,eroe,eroe,hero,NOUN,héroe,héroe,NOUN,eroe,heroe,eroe,0.6
 1568,ringrazio,ringraziare,I thank,VERB,agradezco,agradecer,VERB,ringraziare,agradezco,ringraziar,0.19999999999999996
 1572,dovevi,dovovere,you had to,VERB,tenia que,tenia,VERB,dovovere,tenia que,dovover,0.0
@@ -727,7 +684,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1621,eppure,eppure,nevertheless,ADV,sin embargo,sin,ADP,eppure,sin embargo,eppure,0.18181818181818177
 1628,capace,capace,to be able,ADJ,ser capaz,ser,AUX,capace,ser capaz,capace,0.33333333333333337
 1630,accaduto,accadere,happened,VERB,sucedió,suceder,VERB,accadere,sucedio,accader,0.2857142857142857
-1635,congratulazioni,congratulazione,Congratulations,NOUN,felicidades,felicidad,NOUN,congratulazione,felicidades,congratulacion,0.0714285714285714
 1638,sedia,sedia,chair,NOUN,silla,silla,NOUN,sedia,silla,sedia,0.4
 1639,ferito,ferire,wound,VERB,herida,herida,NOUN,ferire,herida,ferir,0.5
 1640,distrutto,distruggere,destroyed,VERB,destruido,destruir,VERB,distruggere,destruido,distrugger,0.5
@@ -753,7 +709,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1679,tira,tirare,pull,VERB,jalar,jalar,VERB,tirare,jalar,tirar,0.4
 1680,sbrigati,sbrigato,hurry up,VERB,apresúrate,apresúrate,PROPN,sbrigato,apresurate,sbrigato,0.30000000000000004
 1681,saprei,sapreare,I would know,VERB,me gustaría saber,yo,PRON,sapreare,me gustaria saber,saprear,0.23529411764705888
-1685,fila,fila,line,NOUN,línea,línea,NOUN,fila,linea,fila,0.19999999999999996
 1687,conta,contare,matters,VERB,asuntos,asunto,NOUN,contare,asuntos,contar,0.2857142857142857
 1689,giustizia,giustizia,justice,NOUN,justicia,justicia,NOUN,giustizia,justicia,giustizia,0.6666666666666667
 1693,odore,odore,odor,NOUN,olor,olor,NOUN,odore,olor,odore,0.6
@@ -762,7 +717,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1705,faccenda,faccendare,affair,VERB,amorío,amorío,NOUN,faccendare,amorio,faccendar,0.11111111111111116
 1710,rispondi,rispondare,Answers,VERB,respuestas,respuesta,NOUN,rispondare,respuestas,rispondar,0.4
 1713,iei,iei,he,AUX,él,él,PRON,iei,el,iei,0.0
-1715,denti,dente,teeth,NOUN,dientes,diente,NOUN,dente,dientes,dente,0.7142857142857143
 1721,maledetto,maledire,cursed,VERB,maldito,maldito,ADJ,maledire,maldito,maledir,0.5714285714285714
 1722,frega,fregare,screw,VERB,tornillo,tornillo,NOUN,fregare,tornillo,fregar,0.125
 1723,chiamate,chiamata,calls,VERB,llamadas,llamado,ADJ,chiamata,llamadas,chiamata,0.375
@@ -783,8 +737,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1757,estate,estate,summer,NOUN,verano,verano,NOUN,estate,verano,estate,0.16666666666666663
 1759,arrabbiato,arrabbiare,angry,VERB,enojado,enojado,ADJ,arrabbiare,enojado,arrabbiar,0.0
 1760,aperta,aperto,open,VERB,abierto,abierto,ADJ,aperto,abierto,aperto,0.7142857142857143
-1761,tiro,tiro,shot,NOUN,disparo,disparo,NOUN,tiro,disparo,tiro,0.4285714285714286
-1766,notato,notare,noticed,VERB,observó,observar,VERB,notare,observo,notar,0.1428571428571429
 1767,improvviso,improvviso,sudden,ADJ,repentino,repentino,ADJ,improvviso,repentino,improviso,0.33333333333333337
 1770,convinto,convinto,convinced,ADJ,convencido,convencido,ADJ,convinto,convencido,convinto,0.6
 1771,università,università,university,NOUN,universidad,universidad,PROPN,universita,universidad,università,0.7272727272727273
@@ -801,7 +753,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1801,farcela,farcee,do it,PROPN,hazlo,hacer él,VERB,farcee,hazlo,farcee,0.16666666666666663
 1808,sali,sale,salts,VERB,sales,sal,NOUN,sale,sales,sal,0.6
 1809,sabato,sabato,Saturday,NOUN,sábado,sábado,NOUN,sabato,sabado,sabato,0.6666666666666667
-1814,cento,cento,hundred,NUM,centenar,centenar,NOUN,cento,centenar,cento,0.5
 1816,lasciatemi,Lasciatemi,leave me,VERB,déjame,déjame,VERB,Lasciatemi,dejame,Lasciatemi,0.19999999999999996
 1818,ammazzo,ammazzare,I&#39;ll kill,VERB,mataré,matar,VERB,ammazzare,matare,ammazzar,0.375
 1819,stile,stile,style,NOUN,estilo,estilo,NOUN,stile,estilo,stile,0.6666666666666667
@@ -830,12 +781,10 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1883,giacca,giacca,jacket,NOUN,chaqueta,chaqueta,NOUN,giacca,chaqueta,giacca,0.25
 1885,vuoto,vuoto,empty,ADJ,vacío,vacío,ADJ,vuoto,vacio,vuoto,0.4
 1886,contratto,contrarre,contract,VERB,contrato,contrato,NOUN,contrarre,contrato,contrarre,0.6666666666666667
-1888,mentito,mentire,lied,VERB,mintió,mentir,VERB,mentire,mintio,mentir,0.6666666666666667
 1891,siate,siate,be,AUX,ser,ser,AUX,siate,ser,siate,0.19999999999999996
 1898,fastidio,fastidio,nuisance,NOUN,tontería,tontería,NOUN,fastidio,tonteria,fastidio,0.125
 1900,direzione,direzione,direction,NOUN,dirección,dirección,NOUN,direzione,direccion,direzion,0.6666666666666667
 1905,offerta,offrire,offer,VERB,oferta,oferta,NOUN,offrire,oferta,ofrir,0.5
-1908,porte,porta,doors,VERB,puertas,puerta,NOUN,porta,puertas,porta,0.5714285714285714
 1910,mossa,mossare,move,VERB,mover,mover,VERB,mossare,mover,mossar,0.5
 1915,amicizia,amicizia,friendship,NOUN,amistad,amistad,NOUN,amicizia,amistad,amicizia,0.375
 1916,abito,abitare,suit,VERB,traje,traje,NOUN,abitare,traje,abitar,0.0
@@ -849,12 +798,10 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 1934,migliaia,migliaio,thousands,NOUN,miles,mil,NUM,migliaio,miles,milliaio,0.375
 1935,facevo,facevo,I did,VERB,hice,hacer,VERB,facevo,hice,facevo,0.33333333333333337
 1937,angelo,angelo,angel,NOUN,ángel,ángel,PROPN,angelo,angel,angelo,0.6666666666666667
-1941,scudi,scudo,shields,NOUN,escudos,escudo,NOUN,scudo,escudos,scudo,0.7142857142857143
 1942,potevi,potevi,you could,AUX,podrías,podriar,AUX,potevi,podrias,potevi,0.2857142857142857
 1944,maestà,maestà,majesty,NOUN,majestad,majestad,NOUN,maesta,majestad,maestà,0.625
 1949,babbo,Babbo,dad,PROPN,papá,papá,NOUN,Babbo,papa,Babbo,0.19999999999999996
 1953,rilassati,rilassare,take it easy,VERB,tómalo con calma,tómalo,VERB,rilassare,tomalo con calma,rilassar,0.125
-1955,potente,potente,powerful,ADJ,poderoso,poderoso,ADJ,potente,poderoso,potente,0.375
 1957,buco,buco,hole,NOUN,agujero,agujero,NOUN,buco,agujero,buco,0.2857142857142857
 1961,personaggio,personaggio,character,NOUN,personaje,personaje,NOUN,personaggio,personaje,personaggio,0.6363636363636364
 1965,sarete,sarete,you will be,AUX,será,ser,AUX,sarete,sera,sarete,0.33333333333333337
@@ -884,7 +831,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2009,troveremo,troveremere,we will find,VERB,lo encontraremos,él,PRON,troveremere,lo encontraremos,troveremer,0.25
 2011,prete,prete,priest,NOUN,sacerdote,sacerdote,NOUN,prete,sacerdote,prete,0.33333333333333337
 2013,malattia,malattia,illness,NOUN,enfermedad,enfermedad,NOUN,malattia,enfermedad,malattia,0.09999999999999998
-2015,fabbrica,fabbrica,factory,NOUN,fábrica,fábrica,NOUN,fabbrica,fabrica,fabbrica,0.75
 2018,tribunale,tribunale,court,NOUN,corte,corte,NOUN,tribunale,corte,tribunal,0.0
 2020,plancia,plancia,dashboard,NOUN,panel,panel,NOUN,plancia,panel,plancia,0.4285714285714286
 2021,mettiti,mettire,put on,VERB,ponerse,poner él,VERB,mettire,ponerse,mettir,0.0
@@ -941,7 +887,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2165,andiamocene,andiamocena,let&#39;s leave,ADV,vámonos,vámono,NOUN,andiamocena,vamonos,andiamocena,0.18181818181818177
 2166,temporale,temporale,storm,ADJ,tormenta,tormenta,NOUN,temporale,tormenta,temporal,0.25
 2168,sbagliata,sbagliato,wrong,VERB,equivocado,equivocado,ADJ,sbagliato,equivocado,sbagliato,0.19999999999999996
-2172,medicina,medicina,medicine,NOUN,medicamento,medicamento,NOUN,medicina,medicamento,medicina,0.5454545454545454
 2173,finora,finora,until now,ADV,hasta ahora,hasta,ADP,finora,hasta ahora,finora,0.2727272727272727
 2176,andrai,andrai,you will go,VERB,irás,irar,VERB,andrai,iras,andrai,0.16666666666666663
 2177,affrontare,affrontare,face,VERB,rostro,rostro,NOUN,affrontare,rostro,afrontar,0.375
@@ -1066,7 +1011,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2456,ritornare,ritornare,return,VERB,devolver,devolver,VERB,ritornare,devolver,ritornar,0.25
 2463,spagnolo,spagnolo,Spanish,ADJ,español,español,ADJ,spagnolo,espanol,spanolo,0.5714285714285714
 2464,sopravvivere,sopravvivere,to survive,VERB,para sobrevivir,para,ADP,sopravvivere,para sobrevivir,sopraviver,0.4666666666666667
-2475,membri,membro,members,NOUN,miembros,miembro,NOUN,membro,miembros,membro,0.75
 2476,lacrime,lacrima,tears,NOUN,lágrimas,lágrima,NOUN,lacrima,lagrimas,lacrima,0.625
 2478,croce,croce,cross,NOUN,cruz,cruz,PROPN,croce,cruz,croce,0.4
 2483,folla,folla,crowd,NOUN,multitud,multitud,NOUN,folla,multitud,folla,0.125
@@ -1076,7 +1020,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2505,queiio,queiio,that one,ADJ,aquél,aquél,PRON,queiio,aquel,queiio,0.16666666666666663
 2507,invito,invito,Invitation,NOUN,invitación,invitación,NOUN,invito,invitacion,invito,0.5
 2511,venti,venti,winds,NUM,vientos,viento,NOUN,venti,vientos,venti,0.5714285714285714
-2515,scale,scala,stairs,NOUN,escaleras,escalera,NOUN,scala,escaleras,scala,0.5555555555555556
 2516,retta,retta,straight,NOUN,derecho,derecho,NOUN,retta,derecho,retta,0.2857142857142857
 2517,reazione,reazione,reaction,NOUN,reacción,reacción,NOUN,reazione,reaccion,reacion,0.75
 2518,puzza,puzzare,stink,VERB,hedor,hedor,NOUN,puzzare,hedor,puzzar,0.16666666666666663
@@ -1087,7 +1030,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2531,spiacente,spiacente,impatient,ADJ,impaciente,impaciente,PROPN,spiacente,impaciente,spiacente,0.6
 2533,quartiere,quartiere,quarter,NOUN,cuarto,cuarto,ADJ,quartiere,cuarto,quartier,0.5
 2536,occhiali,occhialo,eyeglasses,VERB,los anteojos,el,DET,occhialo,los anteojos,occhialo,0.16666666666666663
-2538,ingresso,ingresso,entrance,NOUN,entrada,entrada,NOUN,ingresso,entrada,ingresso,0.25
 2539,gliene,gliene,give it to him,AUX,dáselo a él,da él él,VERB,gliene,daselo a el,gliene,0.09090909090909094
 2541,bugie,bugia,lies,NOUN,mentiras,mentira,NOUN,bugia,mentiras,bugia,0.25
 2544,sessuale,sessuale,sexual,ADJ,sexual,sexual,ADJ,sessuale,sexual,sessual,0.7142857142857143
@@ -1107,7 +1049,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2579,complimenti,complimento,Well done,NOUN,bien hecho,bien,ADV,complimento,bien hecho,complimento,0.18181818181818177
 2580,quanta,quanta,how much,DET,cuánto,cuánto,PRON,quanta,cuanto,quanta,0.5
 2582,furbo,furbo,cunning,ADJ,astuto,astuto,ADJ,furbo,astuto,furbo,0.16666666666666663
-2583,direttamente,diretto,directly,VERB,directamente,directamente,ADV,diretto,directamente,diretto,0.5
 2586,valigia,valigia,suitcase,NOUN,maleta,maleta,NOUN,valigia,maleta,valigia,0.4285714285714286
 2587,teletrasporto,teletrasporto,teleportation,NOUN,teletransportación,teletransportación,NOUN,teletrasporto,teletransportacion,teletrasporto,0.6666666666666667
 2588,rabbia,rabbia,anger,NOUN,enojo,enojo,NOUN,rabbia,enojo,rabbia,0.0
@@ -1137,10 +1078,8 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2650,dirmelo,dirmee,tell me,NOUN,dime,dimir,VERB,dirmee,dime,dirmee,0.6666666666666667
 2653,vantaggio,vantaggio,advantage,NOUN,ventaja,ventaja,NOUN,vantaggio,ventaja,vantaggio,0.4444444444444444
 2657,reparto,reparto,Department,NOUN,departamento,departamento,NOUN,reparto,departamento,reparto,0.5
-2662,ali,ala,wings,NOUN,alas,ala,NOUN,ala,alas,ala,0.75
 2663,tentativo,tentativo,attempt,NOUN,intentar,intentar,VERB,tentativo,intentar,tentativo,0.33333333333333337
 2665,racconto,raccongere,tale,VERB,cuento,cuento,PROPN,raccongere,cuento,racconger,0.2222222222222222
-2666,prigionieri,prigioniero,prisoners,ADJ,prisioneros,prisionero,NOUN,prigioniero,prisioneros,prigioniero,0.7272727272727273
 2671,oggetto,oggetto,object,NOUN,objeto,objeto,NOUN,oggetto,objeto,oggetto,0.5714285714285714
 2674,grandioso,grandioso,great,ADJ,excelente,excelente,ADJ,grandioso,excelente,grandioso,0.0
 2678,bugiardo,bugiardo,liar,NOUN,mentiroso,mentiroso,ADJ,bugiardo,mentiroso,bugiardo,0.2222222222222222
@@ -1152,7 +1091,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2690,mucchio,mucchio,pile,NOUN,montón,montón,ADV,mucchio,monton,mucchio,0.1428571428571429
 2691,maledetta,maledetto,damn,VERB,maldición,maldición,NOUN,maledetto,maldicion,maledetto,0.33333333333333337
 2694,imperatore,imperatore,emperor,NOUN,emperador,emperador,NOUN,imperatore,emperador,imperatore,0.7
-2703,abbandonato,abbandonare,abandoned,VERB,abandonado,abandonar,VERB,abbandonare,abandonado,abbandonar,0.7
 2711,cellulare,cellulare,mobile phone,ADJ,teléfono móvil,teléfono,NOUN,cellulare,telefono movil,cellular,0.1428571428571429
 2713,uscite,uscita,go out,NOUN,salir,salir,VERB,uscita,salir,uscita,0.16666666666666663
 2714,tradito,tradire,betrayed,VERB,traicionado,traicionado,ADJ,tradire,traicionado,tradir,0.36363636363636365
@@ -1168,7 +1106,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2744,fossimo,fossimo,we were,AUX,éramos,ser,AUX,fossimo,eramos,fossimo,0.1428571428571429
 2745,chili,chilo,kilos,NOUN,kilos,kilo,NOUN,chilo,kilos,chilo,0.4
 2747,assieme,assieme,together,ADV,juntos,junto,ADJ,assieme,juntos,assieme,0.0
-2750,telefonato,telefonare,phoned,VERB,llamó por teléfono,llamar,VERB,telefonare,llamo por telefono,telefonar,0.2777777777777778
 2751,sopporto,soppriro,I tolerate,PROPN,tolero,tolero,VERB,soppriro,tolero,soppriro,0.375
 2752,sognato,sognare,dreamed,VERB,soñado,soñado,ADJ,sognare,sonado,sonar,0.5
 2759,lunedì,lunedì,Monday,NOUN,lunes,lunes,NOUN,lunedi,lunes,lunedì,0.6666666666666667
@@ -1197,8 +1134,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2813,soccorso,soccorso,rescue,NOUN,rescate,rescate,NOUN,soccorso,rescate,soccorso,0.125
 2815,riso,riso,rice,NOUN,arroz,arroz,PROPN,riso,arroz,riso,0.19999999999999996
 2817,messico,Messico,Mexico,PROPN,méxico,méxico,PROPN,Messico,mexico,Messico,0.4285714285714286
-2818,impronte,impronta,fingerprints,NOUN,huellas dactilares,huella,NOUN,impronta,huellas dactilares,impronta,0.11111111111111116
-2819,dirai,dirai,you will say,VERB,dirás,dirar,VERB,dirai,diras,dirai,0.6
 2820,datemi,datemi,give me,VERB,dame,dame,VERB,datemi,dame,datemi,0.5
 2821,bersaglio,bersaglio,target,NOUN,objetivo,objetivo,NOUN,bersaglio,objetivo,bersaglio,0.11111111111111116
 2823,agire,agire,Act,VERB,acto,acto,NOUN,agire,acto,agir,0.25
@@ -1243,7 +1178,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2918,regola,regolare,rule,VERB,regla,reglar,VERB,regolare,regla,regolar,0.7142857142857143
 2923,fidanzato,fidanzare,fiancé,VERB,prometido,prometido,ADJ,fidanzare,prometido,fidanzar,0.0
 2924,dovreste,dovreste,you should,AUX,debería,deber,AUX,dovreste,deberia,dovreste,0.25
-2925,danza,danza,dance,NOUN,bailar,bailar,VERB,danza,bailar,danza,0.33333333333333337
 2928,berlino,Berlino,Berlin,PROPN,berlina,berlina,NOUN,Berlino,berlina,Berlino,0.7142857142857143
 2932,spiegazione,spiegazione,explanation,NOUN,explicación,explicación,NOUN,spiegazione,explicacion,spiegacion,0.4545454545454546
 2933,sbirro,sbirro,cop,NOUN,policía,policía,NOUN,sbirro,policia,sbirro,0.1428571428571429
@@ -1254,7 +1188,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 2949,bevo,bevere,I drink,VERB,bebo,beber,VERB,bevere,bebo,bever,0.4
 2951,sparisci,spariscare,disappear,VERB,desaparecer,desaparecer,VERB,spariscare,desaparecer,spariscar,0.4545454545454546
 2953,parto,parto,I&#39;m leaving,ADV,me voy,yo,PRON,parto,me voy,parto,0.16666666666666663
-2956,incubo,incubo,nightmare,NOUN,pesadilla,pesadilla,NOUN,incubo,pesadilla,incubo,0.0
 2957,fred,fred,cold,ADJ,frío,frío,NOUN,fred,frio,fred,0.5
 2959,erba,erba,grass,NOUN,césped,césped,NOUN,erba,cesped,erba,0.0
 2962,coperta,coperto,cover,ADJ,cubrir,cubrir,VERB,coperto,cubrir,coperto,0.2857142857142857
@@ -1305,11 +1238,8 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 3066,facessi,facessare,I would do,VERB,lo haría,él,PRON,facessare,lo haria,facessar,0.0
 3069,dichiarazione,dichiarazione,declaration,NOUN,declaración,declaración,NOUN,dichiarazione,declaracion,dichiaracion,0.6666666666666667
 3070,dicevi,dicevi,you said,VERB,dijo,decir,VERB,dicevi,dijo,dicevi,0.33333333333333337
-3071,criminale,criminale,criminal,ADJ,delincuente,delincuente,NOUN,criminale,delincuente,criminal,0.18181818181818177
-3075,tette,tetta,boobs,NOUN,tetas,teta,NOUN,tetta,tetas,tetta,0.6
 3076,sezione,sezione,section,NOUN,sección,sección,NOUN,sezione,seccion,sezion,0.5714285714285714
 3079,riprendere,riprendere,take up again,VERB,retomar de nuevo,retomar,VERB,riprendere,retomar de nuevo,riprender,0.3125
-3081,onda,onda,wave,NOUN,ola,ola,NOUN,onda,ola,onda,0.5
 3084,miami,miami,You love me,PROPN,me amas,yo,PRON,miami,me amas,miami,0.4285714285714286
 3088,indovinare,indovinare,guess,VERB,adivinar,adivinar,VERB,indovinare,adivinar,indovinar,0.6666666666666667
 3090,dovessi,dovessi,I had to,AUX,tuve que,tener,VERB,dovessi,tuve que,dovessi,0.25
@@ -1446,8 +1376,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 3452,salto,salto,jump,NOUN,saltar,saltar,VERB,salto,saltar,salto,0.6666666666666667
 3453,saggio,saggio,wise,NOUN,inteligente,inteligente,ADJ,saggio,inteligente,saggio,0.09090909090909094
 3454,raccolto,raccogliere,harvest,VERB,cosecha,cosecha,NOUN,raccogliere,cosecha,raccoglier,0.19999999999999996
-3455,proprietario,proprietario,owner,NOUN,dueño,dueño,NOUN,proprietario,dueno,proprietario,0.16666666666666663
-3460,negri,negre,blacks,ADJ,negros,negro,NOUN,negre,negros,negre,0.6666666666666667
 3463,identità,identità,identity,NOUN,identidad,identidad,NOUN,identita,identidad,identità,0.6666666666666667
 3464,filippo,filippo,Philip,PROPN,felipe,felipe,PROPN,filippo,felipe,filippo,0.5714285714285714
 3465,dritta,dritto,straight,NOUN,derecho,derecho,NOUN,dritto,derecho,dritto,0.4285714285714286
@@ -1487,8 +1415,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 3551,parenti,parente,family members,NOUN,miembros de la familia,miembro,NOUN,parente,miembros de la familia,parente,0.09090909090909094
 3552,monaco,monaco,monk,NOUN,monje,monje,PROPN,monaco,monje,monaco,0.5
 3554,lance,lancia,spears,VERB,lanzas,lanza,NOUN,lancia,lanzas,lancia,0.5
-3555,idioti,idioto,idiots,ADJ,idiotas,idiota,NOUN,idioto,idiotas,idioto,0.7142857142857143
-3556,furto,furto,theft,NOUN,robo,robo,NOUN,furto,robo,furto,0.19999999999999996
 3558,carrozza,carrozza,carriage,NOUN,carro,carro,NOUN,carrozza,carro,carrozza,0.625
 3560,benedica,benedica,bless,VERB,bendecir,bendecir,VERB,benedica,bendecir,benedica,0.5
 3561,avverto,avvertare,I warn you,VERB,te lo advierto,tú,PRON,avvertare,te lo advierto,avertar,0.2857142857142857
@@ -1527,7 +1453,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 3641,chiamerò,chiamerò,I will call,VERB,llamaré,llamar,VERB,chiamero,llamare,chiamerò,0.375
 3643,cappotto,cappotto,coat,NOUN,abrigo,abrigo,NOUN,cappotto,abrigo,cappotto,0.25
 3644,cancro,cancro,cancer,NOUN,cáncer,cáncer,NOUN,cancro,cancer,cancro,0.5
-3648,bibbia,Bibbia,Bible,PROPN,biblia,biblia,NOUN,Bibbia,biblia,Bibbia,0.6666666666666667
 3651,vescovo,vescovo,bishop,NOUN,obispo,obispo,NOUN,vescovo,obispo,vescovo,0.1428571428571429
 3655,sciocca,scioccare,silly,VERB,tonto,tonto,PROPN,scioccare,tonto,scioccar,0.125
 3657,metterò,metterò,I will put,VERB,voy a poner,ir,AUX,mettero,voy a poner,metterò,0.09090909090909094
@@ -1548,7 +1473,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 3705,mettilo,mettilo,put it on,VERB,póntelo,póntelir,VERB,mettilo,pontelo,mettilo,0.4285714285714286
 3709,ferite,ferita,wounds,ADJ,heridas,herido,ADJ,ferita,heridas,ferita,0.5714285714285714
 3711,facce,faccia,faces,VERB,caras,cara,NOUN,faccia,caras,faccia,0.16666666666666663
-3713,eccitante,eccitante,exciting,ADJ,emocionante,emocionante,ADJ,eccitante,emocionante,eccitante,0.6363636363636364
 3714,dormo,dormere,I sleep,PROPN,duermo,dormir,VERB,dormere,duermo,dormer,0.33333333333333337
 3715,dolcezza,dolcezza,sweetness,NOUN,dulzura,dulzura,NOUN,dolcezza,dulzura,dolcezza,0.375
 3716,ditemi,ditemi,tell me,VERB,dime,dimir,VERB,ditemi,dime,ditemi,0.5
@@ -1593,7 +1517,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 3826,cittadini,cittadino,citizens,NOUN,los ciudadanos,el,DET,cittadino,los ciudadanos,cittadino,0.4285714285714286
 3827,chitarra,chitarra,guitar,NOUN,guitarra,guitarra,PROPN,chitarra,guitarra,chitarra,0.75
 3829,botte,botta,beating,NOUN,golpeando,golpear,VERB,botta,golpeando,botta,0.2222222222222222
-3830,andai,andai,I went,VERB,fui,ir,AUX,andai,fui,andai,0.19999999999999996
 3831,allenatore,allenatore,trainer,NOUN,entrenador,entrenador,NOUN,allenatore,entrenador,allenatore,0.4
 3832,vió,vió,go,NUM,ir,ir,VERB,vio,ir,vió,0.33333333333333337
 3833,vigliacco,vigliacco,coward,ADJ,cobarde,cobarde,ADJ,vigliacco,cobarde,villiacco,0.11111111111111116
@@ -1612,7 +1535,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 3876,quassù,quassù,up here,ADV,aquí arriba,aquí,ADV,quassu,aqui arriba,quassù,0.2727272727272727
 3879,preda,predare,prey,VERB,presa,presa,NOUN,predare,presa,predar,0.6666666666666667
 3889,dacci,daccio,give us,VERB,danos,dano,NOUN,daccio,danos,daccio,0.33333333333333337
-3890,colleghi,collega,colleagues,NOUN,colegas,colega,NOUN,collega,colegas,collega,0.7142857142857143
 3891,ciô,ciô,that is,PROPN,eso es,ese,PRON,cio,eso es,ciô,0.0
 3892,cintura,cintura,belt,NOUN,cinturón,cinturón,NOUN,cintura,cinturon,cintura,0.75
 3896,attraversare,attraversare,cross ,VERB,cruz,cruz,PROPN,attraversare,cruz,attraversar,0.09090909090909094
@@ -1635,7 +1557,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 3962,seguo,seguere,I follow,VERB,sigo,seguir,VERB,seguere,sigo,seguer,0.33333333333333337
 3965,rendo,rere,I give,VERB,doy,dar,VERB,rere,doy,rer,0.0
 3969,morirai,morirai,you will die,VERB,morirás,morir,VERB,morirai,moriras,morirai,0.7142857142857143
-3970,monte,monte,Mountain,NOUN,montaña,montaña,NOUN,monte,montana,monte,0.5714285714285714
 3978,disgustoso,disgustoso,Disgusting,ADJ,desagradable,desagradable,ADJ,disgustoso,desagradable,disgustoso,0.25
 3979,deiie,deiie,gods,PROPN,dioses,dios,NOUN,deiie,dioses,deiie,0.33333333333333337
 3981,condotto,condurre,conducted,VERB,llevado a cabo,llevar,VERB,condurre,llevado a cabo,condurre,0.0714285714285714
@@ -1687,7 +1608,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4096,distruzione,distruzione,destruction,NOUN,destrucción,destrucción,NOUN,distruzione,destruccion,distrucion,0.7272727272727273
 4097,cina,Cina,China,PROPN,porcelana,porcelán,ADJ,Cina,porcelana,Cina,0.2222222222222222
 4098,cavo,cavo,cable,NOUN,cable,cable,NOUN,cavo,cable,cavo,0.4
-4105,strumenti,strumento,instruments,NOUN,instrumentos,instrumento,NOUN,strumento,instrumentos,strumento,0.75
 4107,riuscirò,riuscirò,I will succeed,VERB,tendré éxito,tener,VERB,riusciro,tendre exito,riuscirò,0.16666666666666663
 4108,ribelli,ribelle,rebels,ADJ,rebeldes,rebelde,NOUN,ribelle,rebeldes,ribelle,0.625
 4110,quindici,quindici,fifteen,NUM,quince,quince,NUM,quindici,quince,quindici,0.625
@@ -1704,7 +1624,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4138,brindisi,Brindisi,toasts,PROPN,brindis,brindis,PROPN,Brindisi,brindis,Brindisi,0.75
 4141,apra,aprere,open,VERB,abierto,abierto,ADJ,aprere,abierto,aprer,0.4285714285714286
 4145,tienilo,tieniloere,keep it,VERB,quédatelo,quédatelo,ADJ,tieniloere,quedatelo,tieniloer,0.0
-4146,tecnica,tecnico,technique,ADJ,técnica,técnico,ADJ,tecnico,tecnica,tecnico,0.7142857142857143
 4147,svelti,svelto,hurry,VERB,apurarse,apurar él,VERB,svelto,apurarse,svelto,0.0
 4148,spegni,spegnare,switch off,VERB,apagar,apagar,VERB,spegnare,apagar,spenar,0.5
 4149,Simpson,Simpson,Simpsons,PROPN,los simpson,el,DET,Simpson,los simpson,Simpson,0.5454545454545454
@@ -1713,7 +1632,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4157,ostaggi,ostaggio,hostages,NOUN,rehenes,rehén,NOUN,ostaggio,rehenes,ostaggio,0.0
 4160,mira,mirare,aim,VERB,apuntar,apuntar,VERB,mirare,apuntar,mirar,0.2857142857142857
 4171,compagna,compagna,mate,NOUN,compañero,compañero,NOUN,compagna,companero,compana,0.5555555555555556
-4172,Celeste,Celeste,Heavenly,PROPN,celestial,celestial,ADJ,Celeste,celestial,Celeste,0.5555555555555556
 4179,altrettanto,altrettanto,likewise,ADV,asimismo,asimismo,ADV,altrettanto,asimismo,altrettanto,0.18181818181818177
 4180,alleanza,Alleanza,alliance,NOUN,alianza,alianza,NOUN,Alleanza,alianza,Alleanza,0.625
 4181,accendere,accendere,turn on,VERB,encender,encender,VERB,accendere,encender,accender,0.75
@@ -1778,18 +1696,15 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4331,fascino,fascino,charm,NOUN,encanto,encanto,NOUN,fascino,encanto,fascino,0.2857142857142857
 4340,beviamo,bevare,we drink,PROPN,bebemos,beber,VERB,bevare,bebemos,bevar,0.2857142857142857
 4341,bada,bada,mind you,PROPN,fíjate,fíjatir,VERB,bada,fijate,bada,0.16666666666666663
-4347,tasse,tassa,taxes,NOUN,impuestos,impuesto,NOUN,tassa,impuestos,tassa,0.11111111111111116
 4352,sapore,sapore,taste,NOUN,gusto,gusto,NOUN,sapore,gusto,sapore,0.0
 4353,ruota,ruotare,wheel,VERB,rueda,rodar,VERB,ruotare,rueda,ruotar,0.5
 4355,registrazione,registrazione,registration,NOUN,registro,registro,NOUN,registrazione,registro,registracion,0.6666666666666667
 4356,pugnale,pugnale,dagger,NOUN,daga,daga,NOUN,pugnale,daga,punal,0.19999999999999996
 4358,possesso,possesso,possession,NOUN,posesión,posesión,NOUN,possesso,posesion,possesso,0.5
-4359,peste,pesta,plague,VERB,plaga,plaga,NOUN,pesta,plaga,pesta,0.4
 4360,occupati,occupato,busy,VERB,ocupado,ocupado,ADJ,occupato,ocupado,occupato,0.75
 4361,lusso,lusso,luxury,NOUN,lujo,lujo,NOUN,lusso,lujo,lusso,0.6
 4365,facevamo,facevamo,we did,VERB,lo hicimos,él,PRON,facevamo,lo hicimos,facevamo,0.19999999999999996
 4366,facciamolo,facciamolo,let&#39;s do it,VERB,vamos a hacerlo,ir,AUX,facciamolo,vamos a hacerlo,facciamolo,0.2666666666666667
-4367,evidente,evidente,obvious,ADJ,obvio,obvio,ADJ,evidente,obvio,evidente,0.125
 4369,crediamo,credare,we believe,ADJ,creemos,creer,VERB,credare,creemos,credar,0.4285714285714286
 4372,carburante,carburante,fuel,NOUN,combustible,combustible,NOUN,carburante,combustible,carburante,0.36363636363636365
 4378,vincitore,vincitore,winner,NOUN,ganador,ganador,NOUN,vincitore,ganador,vincitore,0.33333333333333337
@@ -1801,7 +1716,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4391,ossigeno,ossigeno,oxygen,NOUN,oxígeno,oxígeno,NOUN,ossigeno,oxigeno,ossigeno,0.625
 4392,merce,merce,goods,NOUN,bienes,bien,NOUN,merce,bienes,merce,0.16666666666666663
 4393,lascerà,lascare,will leave,VERB,se ira,él,PRON,lascare,se ira,lascar,0.0
-4395,insetti,insetto,insects,NOUN,insectos,insecto,NOUN,insetto,insectos,insetto,0.75
 4402,estero,Estero,abroad,NOUN,en extranjero,en,ADP,Estero,en extranjero,Estero,0.3076923076923077
 4403,elicottero,elicottero,helicopter,NOUN,helicóptero,helicóptero,NOUN,elicottero,helicoptero,elicottero,0.7272727272727273
 4411,asta,asta,auction,NOUN,subasta,subasta,NOUN,asta,subasta,asta,0.5714285714285714
@@ -1837,7 +1751,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4498,sedetevi,sedetevi,sit down,NOUN,siéntate,siéntatir,VERB,sedetevi,sientate,sedetevi,0.25
 4500,scordato,scordare,forgotten,VERB,olvidado,olvidado,ADJ,scordare,olvidado,scordar,0.25
 4501,schifoso,schifoso,disgusting,ADJ,desagradable,desagradable,ADJ,schifoso,desagradable,schifoso,0.08333333333333337
-4502,scambio,scambio,exchange,NOUN,intercambio,intercambio,NOUN,scambio,intercambio,scambio,0.5454545454545454
 4504,rispettare,rispettare,respect,VERB,respeto,respeto,NOUN,rispettare,respeto,rispettar,0.5555555555555556
 4505,proiettile,proiettile,bullet,NOUN,bala,bala,NOUN,proiettile,bala,proiettile,0.09999999999999998
 4506,probabilità,probabilità,chance,NOUN,oportunidad,oportunidad,NOUN,probabilita,oportunidad,probabilità,0.09090909090909094
@@ -1852,7 +1765,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4530,vergogno,vergogno,shame,VERB,lástima,lástima,NOUN,vergogno,lastima,vergono,0.0
 4533,ritrovato,ritrovare,found,VERB,encontró,encontrar,VERB,ritrovare,encontro,ritrovar,0.125
 4534,picchiato,picchiare,beaten up,VERB,golpeado,golpeado,ADJ,picchiare,golpeado,picchiar,0.0
-4535,pensai,pensai,I thought,VERB,pensé,pensar,VERB,pensai,pense,pensai,0.6666666666666667
 4537,parlami,parlami,talk to me,NOUN,háblame,háblame,VERB,parlami,hablame,parlami,0.4285714285714286
 4538,nuotare,nuotare,swim,VERB,nadar,nadar,VERB,nuotare,nadar,nuotar,0.5
 4541,miliardi,miliardo,billion,NOUN,mil millones,mil,NUM,miliardo,mil millones,miliardo,0.33333333333333337
@@ -1913,7 +1825,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4678,batteria,batteria,drums,NOUN,batería,batería,NOUN,batteria,bateria,batteria,0.75
 4679,autunno,autunno,fall,NOUN,caer,caer,VERB,autunno,caer,autunno,0.0
 4681,aumento,aumento,increase,NOUN,aumentar,aumentar,VERB,aumento,aumentar,aumento,0.75
-4686,ansia,ansia,anxiety,NOUN,ansiedad,ansiedad,NOUN,ansia,ansiedad,ansia,0.625
 4688,tramonto,tramonto,sunset,NOUN,atardecer,atardecer,NOUN,tramonto,atardecer,tramonto,0.11111111111111116
 4690,suggerisco,suggeriscere,I suggest,VERB,sugiero,sugerir,VERB,suggeriscere,sugiero,suggeriscer,0.4545454545454546
 4693,sentirai,sentirai,you will hear,VERB,oirás,oier,VERB,sentirai,oiras,sentirai,0.25
@@ -1958,7 +1869,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4789,muori,Muori,die,PROPN,morir,morir,VERB,Muori,morir,Muori,0.4
 4790,megiio,Megiio,better,PROPN,mejor,mejor,ADJ,Megiio,mejor,Megiio,0.16666666666666663
 4799,comporta,comportare,leads,VERB,dirige,dirigir,VERB,comportare,dirige,comportar,0.11111111111111116
-4800,comandi,comandio,commands,VERB,comandos,comando,NOUN,comandio,comandos,comandio,0.75
 4801,coglione,coglione,asshole,NOUN,estúpido,estúpido,ADJ,coglione,estupido,coglion,0.125
 4805,busta,busta,envelope,NOUN,sobre,sobre,ADP,busta,sobre,busta,0.0
 4807,azzurro,azzurro,sky blue,ADJ,cielo azul,cielo,NOUN,azzurro,cielo azul,azzurro,0.0
@@ -1974,7 +1884,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4828,sareste,sareste,you would be,AUX,serías,serías,AUX,sareste,serias,sareste,0.2857142857142857
 4835,ni,ni,no,PUNCT,no,no,ADV,ni,no,ni,0.5
 4836,mettetevi,mettetevi,put on,VERB,ponerse,poner él,VERB,mettetevi,ponerse,mettetevi,0.11111111111111116
-4838,indizi,indizio,clues,NOUN,pistas,pista,NOUN,indizio,pistas,indicio,0.0
 4839,giudicare,giudicare,judge,VERB,juez,juez,NOUN,giudicare,juez,giudicar,0.125
 4846,capanna,capanna,Hut,NOUN,cabaña,cabaña,NOUN,capanna,cabana,capanna,0.5714285714285714
 4849,badare,badare,take care,VERB,cuidarse,cuidar él,VERB,badare,cuidarse,badar,0.375
@@ -1989,7 +1898,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4885,fulmine,fulmine,lightning,NOUN,iluminación,iluminación,NOUN,fulmine,iluminacion,fulmine,0.2727272727272727
 4887,figlie,figlia,daughters,NOUN,hijas,hija,NOUN,figlia,hijas,fillia,0.16666666666666663
 4888,fata,fato,fairy,NOUN,hada,hada,NOUN,fato,hada,fato,0.25
-4898,candela,candela,candle,NOUN,vela,vela,NOUN,candela,vela,candela,0.4285714285714286
 4899,baciato,baciare,kissed,VERB,besado,besado,ADJ,baciare,besado,baciar,0.16666666666666663
 4900,baciami,baciami,kiss Me,NOUN,bésame,bésame,VERB,baciami,besame,baciami,0.4285714285714286
 4902,appare,apparire,appears,VERB,aparece,aparecer,VERB,apparire,aparece,apparir,0.4285714285714286
@@ -2000,7 +1908,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4920,quantità,quantità,amount,NOUN,cantidad,cantidad,NOUN,quantita,cantidad,quantità,0.375
 4921,prendetelo,prendetelo,take it,VERB,tómalo,tómalo,VERB,prendetelo,tomalo,prendetelo,0.19999999999999996
 4923,porno,porno,porn,PRON,pornografía,pornografía,NOUN,porno,pornografia,porno,0.4545454545454546
-4925,poesie,poesia,poems,NOUN,poemas,poema,NOUN,poesia,poemas,poesia,0.5
 4927,parcheggio,parcheggio,parking,NOUN,estacionamiento,estacionamiento,NOUN,parcheggio,estacionamiento,parcheggio,0.19999999999999996
 4929,nascosti,nascosti,hidden,VERB,oculto,oculto,ADJ,nascosti,oculto,nascosti,0.25
 4931,leva,leva,lever,NOUN,palanca,palanca,NOUN,leva,palanca,leva,0.2857142857142857
@@ -2023,7 +1930,6 @@ rango,parola,lemma,inglese,pos,spagnolo,lemma_es,pos_es,temp_nfkd_it,temp_nfkd_e
 4976,offeso,offendere,offended,VERB,ofendido,ofendido,ADJ,offendere,ofendido,ofender,0.625
 4978,muovi,muovare,move,NOUN,mover,mover,VERB,muovare,mover,muovar,0.6666666666666667
 4980,minore,minore,minor,ADJ,menor,menor,ADJ,minore,menor,minore,0.6666666666666667
-4981,materia,materia,matter,NOUN,asunto,asunto,NOUN,materia,asunto,materia,0.1428571428571429
 4983,linguaggio,linguaggio,language,NOUN,idioma,idioma,NOUN,linguaggio,idioma,linguaggio,0.09999999999999998
 4987,giâ,giâe,Already,NOUN,ya,ya,ADV,giae,ya,giâe,0.0
 4988,frutto,frutto,fruit,NOUN,fruta,fruta,NOUN,frutto,fruta,frutto,0.6666666666666667

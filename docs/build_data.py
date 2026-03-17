@@ -1,14 +1,14 @@
-"""Convert mutually_intelligible_pairs.csv to data.json for the GitHub Pages site."""
+"""Convert all_words_scored.csv to results_for_display.json for the GitHub Pages site."""
 
 import csv
 import json
 import os
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-CSV_PATH = os.path.join(SCRIPT_DIR, '..', 'data', 'mutually_intelligible_pairs.csv')
+CSV_PATH = os.path.join(SCRIPT_DIR, '..', 'output', 'all_words_scored.csv')
 JSON_PATH = os.path.join(SCRIPT_DIR, 'results_for_display.json')
 
-KEEP_COLS = ['rango', 'parola', 'lemma', 'pos', 'spagnolo', 'lemma_es', 'levenshtein']
+KEEP_COLS = ['rango', 'parola', 'lemma', 'pos', 'spagnolo', 'lemma_es', 'match_type', 'score']
 
 rows = []
 with open(CSV_PATH, newline='', encoding='utf-8') as f:
@@ -19,7 +19,7 @@ with open(CSV_PATH, newline='', encoding='utf-8') as f:
             val = row[col]
             if col == 'rango':
                 entry[col] = int(val)
-            elif col == 'levenshtein':
+            elif col == 'score':
                 entry[col] = round(float(val), 3) if val else None
             else:
                 entry[col] = val

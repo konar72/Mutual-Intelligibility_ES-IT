@@ -2,7 +2,7 @@
 
 Identifies which of the 5,000 most common Italian words are mutually intelligible with Spanish. The pipeline lemmatizes, translates, filters, and scores word pairs using a combination of exact matching, phonetic transformation rules, Levenshtein distance, and WordNet synonym expansion.
 
-**Result:** ~2,000 of the top 5,000 Italian words are mutually intelligible with Spanish. See [`mutually_intelligible_pairs.csv`](data/mutually_intelligible_pairs.csv).
+**Result:** ~2,000 of the top 5,000 Italian words are mutually intelligible with Spanish. See [`all_words_scored.csv`](output/all_words_scored.csv).
 
 ## Pipeline
 
@@ -97,31 +97,47 @@ GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/google-cloud-credentials.json
 ### Running
 
 ```bash
-python pipeline/make_list.py        # Stage 1: lemmatize and translate
-python pipeline/process_words.py    # Stage 2: filter
-python pipeline/extract_es.py       # Stage 3: Spanish matching
-python docs/build_data.py            # Rebuild site data
+python run.py                        # Run full pipeline + rebuild site data
+```
+
+Or run individual stages:
+
+```bash
+python pipeline/make-list/run.py    # Stage 1: lemmatize and translate
+python pipeline/process-words/run.py # Stage 2: filter
+python pipeline/extract/run.py      # Stage 3: score intelligibility
+python docs/build_data.py           # Rebuild site data
 ```
 
 ## Project Structure
 
 ```
 pipeline/                        # Processing scripts
-  make_list.py                   # Stage 1: lemmatize and translate
-  process_words.py               # Stage 2: filter
-  extract_es.py                  # Stage 3: Spanish matching
-data/                            # Input and output CSVs
-  raw.csv                        # Input: 5,000 Italian words
-  parole_italiane.csv            # Stage 1 output
-  mutually_intelligible_pairs.csv  # Final: intelligible pairs
-  non_intelligible_pairs.csv     # Final: non-intelligible pairs
-  overrides.csv                  # Manual corrections
+  make-list/                     # Stage 1: lemmatize and translate
+    lemmatize.py                 # Lemmatize Italian words with spaCy
+    translate.py                 # Translate to English + back-translate
+    run.py                       # Orchestrator
+  process-words/                 # Stage 2: filter
+    deduplicate.py               # Remove duplicate lemmas
+    pos_tag.py                   # Add part-of-speech tags
+    filters.py                   # Eliminate proper nouns, symbols, English words
+    run.py                       # Orchestrator
+  extract/                       # Stage 3: score intelligibility
+    translate_spanish.py         # Translate to Spanish
+    clean_spanish.py             # Clean and lemmatize Spanish
+    spanishify.py                # Italian-to-Spanish phonetic rules
+    similarity.py                # Levenshtein distance + WordNet synonyms
+    score.py                     # Compute final intelligibility score
+    run.py                       # Orchestrator
+input/                           # Source and input data
+  240510_Matthias-Buchmeier_Italian-frequency-list-1-5000.csv
+                                 # 5,000 Italian words: lemmatized + translated
+output/                          # Pipeline output
+  all_words_scored.csv           # Final: all words with intelligibility scores
 docs/                            # GitHub Pages site
-  config.json                   # Title and description (shared with README)
   build_data.py                  # CSV to JSON converter
-  index.html                    # Searchable word pair table
+  index.html                     # Searchable word pair table
 temp/                            # Intermediate files (gitignored)
-result/                          # Final processed output (gitignored)
 ```
 
 ## Data Source
