@@ -5,7 +5,6 @@ Identifies which of the 5,000 most common Italian words are mutually intelligibl
 
 **Result:** 
 ~2,000 of the top 5,000 Italian words are mutually intelligible with Spanish. 
-[`Visit the site`](https://konar72.github.io/Mutual-Intelligibility_ES-IT/)
 
 ## Pipeline
 
