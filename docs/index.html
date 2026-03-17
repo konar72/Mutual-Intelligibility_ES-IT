@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Italian-Spanish Mutual Intelligibility</title>
-<meta name="description" content="Identifies which of the 5,000 most common Italian words are mutually intelligible with Spanish using NLP techniques.">
+<title>Italian-Spanish Mutual Intelligibility: NLP Analysis of the 5,000 Most Common Italian Words 🇮🇹</title>
+<meta name="description" content="Identifies which of the 5,000 most common Italian words are mutually intelligible with Spanish. The pipeline lemmatizes, translates, filters, and scores word pairs using a combination of exact matching, phonetic transformation rules, Levenshtein distance, and WordNet synonym expansion.">
 <style>
   :root {
-    --accent: #4caf50;
-    --accent-hover: #388e3c;
-    --bg: #121212;
+    --accent: #20a190;
+    --accent-hover: #d8fffa;
+    --bg: #1c1c1c;
     --surface: #1e1e1e;
     --surface2: #2a2a2a;
     --text: #e0e0e0;
@@ -45,6 +45,12 @@
     max-width: 650px;
     margin: 0 auto;
   }
+  .header-links {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+  }
+  header a { color: var(--accent); }
+  header a:hover { color: var(--accent-hover); }
   .controls {
     max-width: 900px;
     margin: 0 auto 1rem;
@@ -150,9 +156,15 @@
 </head>
 <body>
 <header>
-  <h1 id="site-title"></h1>
-  <div class="subtitle" id="site-subtitle"></div>
-  <p id="site-description"></p>
+  <h1>Italian-Spanish Mutual Intelligibility</h1>
+  <div class="subtitle">NLP Analysis of the 5,000 Most Common Italian Words</div>
+  <p>Identifies which of the 5,000 most common Italian words (Source: Matthias Buchmeier's <a href="https://en.m.wiktionary.org/wiki/User:Matthias_Buchmeier/Italian_frequency_list-1-5000">Italian frequency list</a>) are mutually intelligible with Spanish using phonetic transformation rules, Levenshtein distance, and WordNet synonym expansion.</p>
+  <p class="header-links">    
+    Created by <a href="https://github.com/konar72">A. Konar</a>
+    <br>
+    For more information on this project, or to provide feedback, please visit the <a href="https://github.com/konar72/Italian">GitHub repository</a>
+    <br><br>
+  </p>
 </header>
 
 <div class="controls">
@@ -168,7 +180,7 @@
   <table>
     <thead>
       <tr>
-        <th data-col="rango">Rank<span class="arrow"></span></th>
+        <th data-col="rango">Italian Frequency Rank<span class="arrow"></span></th>
         <th data-col="parola">Italiano<span class="arrow"></span></th>
         <th data-col="spagnolo">Español<span class="arrow"></span></th>
         <th data-col="pos">POS<span class="arrow"></span></th>
@@ -179,12 +191,6 @@
   </table>
 </div>
 
-<footer>
-  Data from the top 5,000 Italian words by frequency.
-  Source: <a href="https://en.m.wiktionary.org/wiki/User:Matthias_Buchmeier/Italian_frequency_list-1-5000">Matthias Buchmeier</a>.
-  <br>
-  <a href="https://github.com/konar72/Italian">View on GitHub</a>
-</footer>
 
 <script>
 let DATA = [];
@@ -193,16 +199,8 @@ let sortCol = 'rango';
 let sortAsc = true;
 
 async function init() {
-  const res = await fetch('data.json');
-  const json = await res.json();
-  DATA = json.rows;
-
-  // Title and description from config
-  const cfg = json.config;
-  document.getElementById('site-title').textContent = cfg.title;
-  document.getElementById('site-subtitle').textContent = cfg.subtitle || '';
-  document.getElementById('site-description').textContent = cfg.description;
-  document.title = cfg.title + (cfg.subtitle ? ' — ' + cfg.subtitle : '');
+  const res = await fetch('results_for_display.json');
+  DATA = await res.json();
 
   // POS filter options
   const posSet = new Set(DATA.map(d => d.pos).filter(Boolean));
