@@ -1,10 +1,13 @@
 import spacy
 import pandas as pd
 import numpy as np
+import os
+
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 
 nlp = spacy.load('it_core_news_lg')
 
-df = pd.read_csv('parole_italiane.csv')
+df = pd.read_csv(os.path.join(ROOT, 'data', 'parole_italiane.csv'))
 df.drop(columns='frequenza',inplace=True)
 
 # ELIMINATE WORDS WITH SAME LEMMAS
@@ -23,7 +26,7 @@ df['pos'] = df['lemma'].apply(lambda x: nlp(x)[0].pos_)
 
 # Create elimination table
 df_elim = df.head(0)
-df_elim.to_csv("temp/elim_all_filtered_list.csv", index = False)
+df_elim.to_csv(os.path.join(ROOT, "temp/elim_all_filtered_list.csv"), index = False)
 
 # ELIMINATE ENGLISH PROPER NOUNS
 i_elim = (
@@ -33,8 +36,8 @@ i_elim = (
     )
 )
 df_elim = df[i_elim].copy()
-df_elim.to_csv("temp/elim_propn.csv", index = False)
-df_elim.to_csv("temp/elim_all_filtered_list.csv", mode = 'a', index = False, header = False)
+df_elim.to_csv(os.path.join(ROOT, "temp/elim_propn.csv"), index = False)
+df_elim.to_csv(os.path.join(ROOT, "temp/elim_all_filtered_list.csv"), mode = 'a', index = False, header = False)
 
 df = df[~i_elim]
 
@@ -47,8 +50,8 @@ i_elim = (
     (df.parola.str.len() < 2) & (df.lemma.str.len() < 2)
 )
 df_elim = df[i_elim].copy()
-df_elim.to_csv("temp/elim_sym.csv", index = False)
-df_elim.to_csv("temp/elim_all_filtered_list.csv", mode = 'a', index = False, header = False)
+df_elim.to_csv(os.path.join(ROOT, "temp/elim_sym.csv"), index = False)
+df_elim.to_csv(os.path.join(ROOT, "temp/elim_all_filtered_list.csv"), mode = 'a', index = False, header = False)
 
 df = df[~i_elim]
 
@@ -57,15 +60,15 @@ df = df[~i_elim]
 #   idea, computer, opera, radio, cinema, are lost. 
 i_elim = (df.parola.str.lower() == df.inglese.str.lower())
 df_elim = df[i_elim].copy()
-df_elim.to_csv("temp/elim_en.csv", index=False)
-df_elim.to_csv("temp/elim_all_filtered_list.csv", mode = 'a', index = False, header = False)
+df_elim.to_csv(os.path.join(ROOT, "temp/elim_en.csv"), index=False)
+df_elim.to_csv(os.path.join(ROOT, "temp/elim_all_filtered_list.csv"), mode = 'a', index = False, header = False)
 
 df = df[~i_elim]
 
 # SAVE
 df = df.sort_values(by='rango')
-df.to_csv('temp/filtered_list.csv', index = False)
+df.to_csv(os.path.join(ROOT, 'temp/filtered_list.csv'), index = False)
 
 df_elim = pd.read_csv('temp/elim_all_filtered_list.csv')
 df_elim = df_elim.sort_values(by='rango')
-df_elim.to_csv("temp/elim_all_filtered_list.csv", index=False)
+df_elim.to_csv(os.path.join(ROOT, "temp/elim_all_filtered_list.csv"), index=False)

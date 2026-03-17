@@ -99,20 +99,22 @@ def spanishify(text):
     return text
 
 
-load_dotenv()  
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+
+load_dotenv()
 if not os.getenv('GOOGLE_APPLICATION_CREDENTIALS'):
     raise ValueError("GOOGLE_APPLICATION_CREDENTIALS is not set.")
 
 
-if os.path.isfile('temp/spanish.csv'): 
+if os.path.isfile(os.path.join(ROOT, 'temp/spanish.csv')):
     print('doc with spanish exists...')
-    df = pd.read_csv('temp/spanish.csv')
+    df = pd.read_csv(os.path.join(ROOT, 'temp/spanish.csv'))
     if 'spagnolo' not in df.columns:
-        df = pd.read_csv('temp/filtered_list.csv')
+        df = pd.read_csv(os.path.join(ROOT, 'temp/filtered_list.csv'))
     df['spagnolo'] = df['spagnolo'].str.lower()
 else:
     print('creating doc with spanish')
-    df = pd.read_csv('temp/filtered_list.csv')
+    df = pd.read_csv(os.path.join(ROOT, 'temp/filtered_list.csv'))
 
     # LEMMATIZE SPANISH
     translate_client = translate.Client()  # Assumes environment variable is set for auth
@@ -134,7 +136,7 @@ else:
 
     df['spagnolo'] = spagnolo_list 
     df['spagnolo'] = df['spagnolo'].str.lower()
-    df.to_csv("temp/spanish.csv", index = False)
+    df.to_csv(os.path.join(ROOT, "temp/spanish.csv"), index = False)
 
 df = df.drop(columns=['it_reverse'])
 
@@ -148,7 +150,7 @@ df['pos_es'] = df['spagnolo'].apply(lambda x: nlp(x)[0].pos_)
 
 # Create elimination table
 df_elim = df.head(0)
-df_elim.to_csv("temp/mutually_intelligible.csv", index = False)
+df_elim.to_csv(os.path.join(ROOT, "temp/mutually_intelligible.csv"), index = False)
 
 # Remove accents
 df['temp_nfkd_it'] = df['lemma'].apply(lambda x: remove_accents(x))
@@ -156,8 +158,8 @@ df['temp_nfkd_es'] = df['spagnolo'].apply(lambda x: remove_accents(x))
 
 # ELIMINATE EXACT MATCHES
 i_elim = (df.temp_nfkd_it.str.lower() == df.temp_nfkd_es.str.lower())
-df[i_elim].to_csv("temp/same_es.csv", index=False)
-df[i_elim].drop(columns=['temp_nfkd_it', 'temp_nfkd_es']).to_csv("temp/mutually_intelligible.csv", mode = 'a', index = False, header = False)
+df[i_elim].to_csv(os.path.join(ROOT, "temp/same_es.csv"), index=False)
+df[i_elim].drop(columns=['temp_nfkd_it', 'temp_nfkd_es']).to_csv(os.path.join(ROOT, "temp/mutually_intelligible.csv"), mode = 'a', index = False, header = False)
 
 df = df[~i_elim]
 
@@ -173,8 +175,8 @@ for i, x in enumerate(df['spagnolo']):
 df['levenshtein'] = levenshtein_score
 
 i_elim = df['levenshtein'] > 0.75
-df[i_elim].to_csv("temp/elim_levenshtein.csv", index=False)
-df[i_elim].drop(columns=['it_spanishify','temp_nfkd_it', 'temp_nfkd_es','levenshtein']).to_csv("temp/mutually_intelligible.csv", mode = 'a', index = False, header = False)
+df[i_elim].to_csv(os.path.join(ROOT, "temp/elim_levenshtein.csv"), index=False)
+df[i_elim].drop(columns=['it_spanishify','temp_nfkd_it', 'temp_nfkd_es','levenshtein']).to_csv(os.path.join(ROOT, "temp/mutually_intelligible.csv"), mode = 'a', index = False, header = False)
 
 df = df[~i_elim]
 print(len(df))
@@ -200,13 +202,13 @@ df_mutually_intelligible = pd.DataFrame(mutually_intelligible_pairs)
 df_non_intelligible = pd.DataFrame(non_intelligible_pairs)
 print(len(df_mutually_intelligible))
 # Save to CSV files
-df_mutually_intelligible.to_csv('mutually_intelligible_pairs.csv', index=False)
-df_non_intelligible.to_csv('non_intelligible_pairs.csv', index=False)
+df_mutually_intelligible.to_csv(os.path.join(ROOT, 'data/mutually_intelligible_pairs.csv'), index=False)
+df_non_intelligible.to_csv(os.path.join(ROOT, 'data/non_intelligible_pairs.csv'), index=False)
 
 # SAVE
 df = df.sort_values(by='levenshtein', ascending=False)
-df.to_csv('result/processed_parole_italiane.csv', index = False)
+df.to_csv(os.path.join(ROOT, 'result/processed_parole_italiane.csv'), index = False)
 
 df_elim = pd.read_csv('temp/mutually_intelligible.csv')
 df_elim = df_elim.sort_values(by='rango')
-df_elim.to_csv("temp/mutually_intelligible.csv", index=False)
+df_elim.to_csv(os.path.join(ROOT, "temp/mutually_intelligible.csv"), index=False)

@@ -131,7 +131,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+# /site  # disabled — docs/ is our GitHub Pages folder
 
 # mypy
 .mypy_cache/

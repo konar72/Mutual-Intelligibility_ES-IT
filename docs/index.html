@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Italian-Spanish Mutual Intelligibility</title>
+<meta name="description" content="Identifies which of the 5,000 most common Italian words are mutually intelligible with Spanish using NLP techniques.">
+<style>
+  :root {
+    --accent: #4caf50;
+    --accent-hover: #388e3c;
+    --bg: #121212;
+    --surface: #1e1e1e;
+    --surface2: #2a2a2a;
+    --text: #e0e0e0;
+    --muted: #999;
+    --border: #333;
+    --highlight: #2a2a2a;
+    --input-bg: #1e1e1e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  header {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+  header .subtitle {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    color: var(--muted);
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .controls {
+    max-width: 900px;
+    margin: 0 auto 1rem;
+    padding: 0 1rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .controls input[type="search"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--input-bg);
+    color: var(--text);
+  }
+  .controls select {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: var(--input-bg);
+    color: var(--text);
+  }
+  .controls input:focus, .controls select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+  .result-count {
+    max-width: 900px;
+    margin: 0 auto 0.5rem;
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .table-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  th {
+    position: sticky;
+    top: 0;
+    background: var(--surface2);
+    color: var(--text);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent);
+  }
+  th:hover { background: #333; }
+  th .arrow { font-size: 0.7rem; margin-left: 0.3rem; opacity: 0.4; }
+  th.sorted .arrow { opacity: 1; color: var(--accent); }
+  td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:hover td { background: var(--highlight); }
+  .pos-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    background: var(--surface2);
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .lev-bar {
+    display: inline-block;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--accent);
+    vertical-align: middle;
+    margin-right: 0.4rem;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--accent); }
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.6rem; }
+    header .subtitle { font-size: 0.95rem; }
+    .controls { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="site-title"></h1>
+  <div class="subtitle" id="site-subtitle"></div>
+  <p id="site-description"></p>
+</header>
+
+<div class="controls">
+  <input type="search" id="search" placeholder="Search Italian or Spanish…" autocomplete="off">
+  <select id="pos-filter">
+    <option value="">All parts of speech</option>
+  </select>
+</div>
+
+<div class="result-count" id="result-count"></div>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th data-col="rango">Rank<span class="arrow"></span></th>
+        <th data-col="parola">Italiano<span class="arrow"></span></th>
+        <th data-col="spagnolo">Español<span class="arrow"></span></th>
+        <th data-col="pos">POS<span class="arrow"></span></th>
+        <th data-col="levenshtein">Similarity<span class="arrow"></span></th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+
+<footer>
+  Data from the top 5,000 Italian words by frequency.
+  Source: <a href="https://en.m.wiktionary.org/wiki/User:Matthias_Buchmeier/Italian_frequency_list-1-5000">Matthias Buchmeier</a>.
+  <br>
+  <a href="https://github.com/konar72/Italian">View on GitHub</a>
+</footer>
+
+<script>
+let DATA = [];
+let filtered = [];
+let sortCol = 'rango';
+let sortAsc = true;
+
+async function init() {
+  const res = await fetch('data.json');
+  const json = await res.json();
+  DATA = json.rows;
+
+  // Title and description from config
+  const cfg = json.config;
+  document.getElementById('site-title').textContent = cfg.title;
+  document.getElementById('site-subtitle').textContent = cfg.subtitle || '';
+  document.getElementById('site-description').textContent = cfg.description;
+  document.title = cfg.title + (cfg.subtitle ? ' — ' + cfg.subtitle : '');
+
+  // POS filter options
+  const posSet = new Set(DATA.map(d => d.pos).filter(Boolean));
+  const posFilter = document.getElementById('pos-filter');
+  [...posSet].sort().forEach(pos => {
+    const opt = document.createElement('option');
+    opt.value = pos;
+    opt.textContent = pos;
+    posFilter.appendChild(opt);
+  });
+
+  document.getElementById('search').addEventListener('input', render);
+  document.getElementById('pos-filter').addEventListener('change', render);
+
+  // Column header sorting
+  document.querySelectorAll('th[data-col]').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.col;
+      if (sortCol === col) {
+        sortAsc = !sortAsc;
+      } else {
+        sortCol = col;
+        sortAsc = (col === 'levenshtein') ? false : true;
+      }
+      render();
+    });
+  });
+
+  render();
+}
+
+function updateSortArrows() {
+  document.querySelectorAll('th[data-col]').forEach(th => {
+    const arrow = th.querySelector('.arrow');
+    if (th.dataset.col === sortCol) {
+      th.classList.add('sorted');
+      arrow.textContent = sortAsc ? ' \u25B2' : ' \u25BC';
+    } else {
+      th.classList.remove('sorted');
+      arrow.textContent = '';
+    }
+  });
+}
+
+function render() {
+  const query = document.getElementById('search').value.toLowerCase().trim();
+  const posVal = document.getElementById('pos-filter').value;
+
+  filtered = DATA.filter(d => {
+    if (posVal && d.pos !== posVal) return false;
+    if (query) {
+      return d.parola.toLowerCase().includes(query)
+        || d.spagnolo.toLowerCase().includes(query)
+        || (d.lemma && d.lemma.toLowerCase().includes(query))
+        || (d.lemma_es && d.lemma_es.toLowerCase().includes(query));
+    }
+    return true;
+  });
+
+  // Sort
+  const dir = sortAsc ? 1 : -1;
+  if (sortCol === 'rango' || sortCol === 'levenshtein') {
+    filtered.sort((a, b) => dir * ((a[sortCol] || 0) - (b[sortCol] || 0)));
+  } else if (sortCol === 'pos') {
+    filtered.sort((a, b) => dir * (a.pos || '').localeCompare(b.pos || ''));
+  } else {
+    filtered.sort((a, b) => dir * (a[sortCol] || '').localeCompare(b[sortCol] || ''));
+  }
+
+  updateSortArrows();
+
+  document.getElementById('result-count').textContent =
+    filtered.length === DATA.length
+      ? `${filtered.length} word pairs`
+      : `${filtered.length} of ${DATA.length} word pairs`;
+
+  const tbody = document.getElementById('tbody');
+  const CHUNK = 200;
+  const rows = filtered.slice(0, CHUNK);
+  tbody.innerHTML = rows.map(rowHTML).join('');
+
+  if (filtered.length > CHUNK) {
+    let loaded = CHUNK;
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && loaded < filtered.length) {
+        const next = filtered.slice(loaded, loaded + CHUNK);
+        tbody.insertAdjacentHTML('beforeend', next.map(rowHTML).join(''));
+        loaded += CHUNK;
+        if (loaded >= filtered.length) observer.disconnect();
+      }
+    });
+    const sentinel = document.createElement('tr');
+    sentinel.innerHTML = '<td colspan="5" style="height:1px;border:none"></td>';
+    tbody.appendChild(sentinel);
+    observer.observe(sentinel);
+  }
+}
+
+function rowHTML(d) {
+  const lev = d.levenshtein;
+  const levPct = lev != null ? Math.round(lev * 100) : null;
+  const levDisplay = levPct != null
+    ? `<span class="lev-bar" style="width:${levPct * 0.6}px"></span>${levPct}%`
+    : '\u2014';
+  return `<tr>
+    <td>${d.rango}</td>
+    <td><strong>${esc(d.parola)}</strong></td>
+    <td>${esc(d.spagnolo)}</td>
+    <td><span class="pos-tag">${esc(d.pos)}</span></td>
+    <td>${levDisplay}</td>
+  </tr>`;
+}
+
+function esc(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+init();
+</script>
+</body>
+</html>

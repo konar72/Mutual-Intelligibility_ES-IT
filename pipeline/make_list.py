@@ -12,7 +12,8 @@ if not os.getenv('GOOGLE_APPLICATION_CREDENTIALS'):
     raise ValueError("GOOGLE_APPLICATION_CREDENTIALS is not set.")
 
 # LOAD RAW LIST
-df = pd.read_csv('raw.csv')
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+df = pd.read_csv(os.path.join(ROOT, 'data', 'raw.csv'))
 
 
 ## LEMMATIZATION
@@ -55,6 +56,6 @@ while index < total_entries:
 df['inglese'] = inglese_list
 df['it_reverse'] = italiano_rev_list
 
-df.to_csv('parole_italiane.csv', index=False)
+df.to_csv(os.path.join(ROOT, 'data', 'parole_italiane.csv'), index=False)
 
 print("Done.")
