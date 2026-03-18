@@ -1,5 +1,5 @@
-# Itañol
-## Italian-Spanish Mutual Intelligibility: NLP Analysis of the 5,000 Most Common Italian Words 🇮🇹
+# Itañol 🇮🇹🤝🇪🇸
+## Italian-Spanish Mutual Intelligibility: NLP Analysis of the 5,000 Most Common Italian Words 
 
 Identifies which of the 5,000 most common Italian words are mutually intelligible with Spanish. The pipeline lemmatizes, translates, filters, and scores word pairs using a combination of exact matching, phonetic transformation rules, Levenshtein distance, and WordNet synonym expansion.
 
@@ -153,7 +153,3 @@ temp/                            # Intermediate files (gitignored)
 | 2024-05-10 | Project started -- initial commit with raw word list and processing scripts |
 | 2026-03-17 | Added more mutually intelligible pairs, WordNet integration |
 | 2026-03-17 | Added comprehensive README |
-
-## License
-
-MIT
